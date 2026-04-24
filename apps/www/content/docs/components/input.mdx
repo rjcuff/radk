@@ -1,0 +1,36 @@
+---
+title: Input
+description: Displays a form input field or a component that looks like an input field.
+---
+
+## Installation
+
+```bash
+npx mono-ui add input
+```
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input"
+
+export default function Page() {
+  return <Input type="email" placeholder="Email" />
+}
+```
+
+## With Label
+
+```tsx
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+export default function Page() {
+  return (
+    <div className="grid gap-1.5">
+      <Label htmlFor="email">Email</Label>
+      <Input type="email" id="email" placeholder="name@example.com" />
+    </div>
+  )
+}
+```

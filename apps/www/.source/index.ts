@@ -1,0 +1,22 @@
+// @ts-nocheck -- skip type checking
+import * as meta_0 from "../content/docs/meta.json?collection=meta&hash=1776993299931"
+import * as docs_15 from "../content/docs/components/tooltip.mdx?collection=docs&hash=1776993299931"
+import * as docs_14 from "../content/docs/components/tabs.mdx?collection=docs&hash=1776993299931"
+import * as docs_13 from "../content/docs/components/skeleton.mdx?collection=docs&hash=1776993299931"
+import * as docs_12 from "../content/docs/components/separator.mdx?collection=docs&hash=1776993299931"
+import * as docs_11 from "../content/docs/components/select.mdx?collection=docs&hash=1776993299931"
+import * as docs_10 from "../content/docs/components/label.mdx?collection=docs&hash=1776993299931"
+import * as docs_9 from "../content/docs/components/input.mdx?collection=docs&hash=1776993299931"
+import * as docs_8 from "../content/docs/components/dropdown-menu.mdx?collection=docs&hash=1776993299931"
+import * as docs_7 from "../content/docs/components/dialog.mdx?collection=docs&hash=1776993299931"
+import * as docs_6 from "../content/docs/components/card.mdx?collection=docs&hash=1776993299931"
+import * as docs_5 from "../content/docs/components/button.mdx?collection=docs&hash=1776993299931"
+import * as docs_4 from "../content/docs/components/badge.mdx?collection=docs&hash=1776993299931"
+import * as docs_3 from "../content/docs/components/avatar.mdx?collection=docs&hash=1776993299931"
+import * as docs_2 from "../content/docs/theming.mdx?collection=docs&hash=1776993299931"
+import * as docs_1 from "../content/docs/installation.mdx?collection=docs&hash=1776993299931"
+import * as docs_0 from "../content/docs/index.mdx?collection=docs&hash=1776993299931"
+import { _runtime } from "fumadocs-mdx"
+import * as _source from "../source.config"
+export const docs = _runtime.doc<typeof _source.docs>([{ info: {"path":"index.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/index.mdx"}, data: docs_0 }, { info: {"path":"installation.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/installation.mdx"}, data: docs_1 }, { info: {"path":"theming.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/theming.mdx"}, data: docs_2 }, { info: {"path":"components\\avatar.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/avatar.mdx"}, data: docs_3 }, { info: {"path":"components\\badge.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/badge.mdx"}, data: docs_4 }, { info: {"path":"components\\button.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/button.mdx"}, data: docs_5 }, { info: {"path":"components\\card.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/card.mdx"}, data: docs_6 }, { info: {"path":"components\\dialog.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/dialog.mdx"}, data: docs_7 }, { info: {"path":"components\\dropdown-menu.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/dropdown-menu.mdx"}, data: docs_8 }, { info: {"path":"components\\input.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/input.mdx"}, data: docs_9 }, { info: {"path":"components\\label.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/label.mdx"}, data: docs_10 }, { info: {"path":"components\\select.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/select.mdx"}, data: docs_11 }, { info: {"path":"components\\separator.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/separator.mdx"}, data: docs_12 }, { info: {"path":"components\\skeleton.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/skeleton.mdx"}, data: docs_13 }, { info: {"path":"components\\tabs.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/tabs.mdx"}, data: docs_14 }, { info: {"path":"components\\tooltip.mdx","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/components/tooltip.mdx"}, data: docs_15 }]);
+export const meta = _runtime.meta<typeof _source.meta>([{ info: {"path":"meta.json","absolutePath":"C:/Users/ryanj/Desktop/ui-library/apps/www/content/docs/meta.json"}, data: meta_0 }]);

@@ -1,0 +1,61 @@
+---
+title: Installation
+description: How to install and configure mono-ui in your project.
+---
+
+## Prerequisites
+
+- Node.js 18+
+- A React project (Next.js, Vite, etc.)
+- Tailwind CSS configured
+
+## 1. Run init
+
+```bash
+npx mono-ui init
+```
+
+This creates a `components.json` in your project root and installs the base dependencies:
+`clsx`, `tailwind-merge`, `class-variance-authority`.
+
+## 2. Add components
+
+```bash
+npx mono-ui add button
+npx mono-ui add button card dialog
+```
+
+Each component is copied as source code into `src/components/ui/`.
+
+## 3. Import and use
+
+```tsx
+import { Button } from "@/components/ui/button"
+
+export default function Page() {
+  return <Button>Hello mono-ui</Button>
+}
+```
+
+## components.json
+
+The `components.json` file controls where components are installed and how imports are resolved:
+
+```json
+{
+  "$schema": "https://mono-ui.dev/schema.json",
+  "style": "mono-ui",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "css": "app/globals.css",
+    "baseColor": "slate-blue",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui"
+  }
+}
+```

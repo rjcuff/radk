@@ -1,0 +1,26 @@
+---
+title: Label
+description: Renders an accessible label associated with controls.
+---
+
+## Installation
+
+```bash
+npx mono-ui add label
+```
+
+## Usage
+
+```tsx
+import { Label } from "@/components/ui/label"
+import { Input } from "@/components/ui/input"
+
+export default function Page() {
+  return (
+    <div className="grid gap-1.5">
+      <Label htmlFor="name">Name</Label>
+      <Input id="name" placeholder="Your name" />
+    </div>
+  )
+}
+```

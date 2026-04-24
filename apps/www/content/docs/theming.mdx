@@ -1,0 +1,55 @@
+---
+title: Theming
+description: How mono-ui's color system and CSS variables work.
+---
+
+## CSS Variables
+
+mono-ui uses CSS custom properties scoped to `:root` and `.dark`. All components reference semantic variable names, never hardcoded colors.
+
+```css
+:root {
+  --primary: oklch(0.47 0.19 264);      /* slate-blue */
+  --primary-foreground: oklch(1 0 0);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.13 0.015 255);
+  --radius: 0.375rem;
+  /* ... */
+}
+```
+
+## Dark Mode
+
+Wrap your app in a `ThemeProvider` and toggle the `dark` class on `<html>`:
+
+```tsx
+import { ThemeProvider } from "next-themes"
+
+export default function Layout({ children }) {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="system">
+      {children}
+    </ThemeProvider>
+  )
+}
+```
+
+## Customizing Colors
+
+Edit the CSS variables in your `globals.css` to match your brand. All components update automatically.
+
+```css
+:root {
+  --primary: oklch(0.55 0.22 142); /* change to green */
+}
+```
+
+## Border Radius
+
+mono-ui uses a single `--radius` variable (`0.375rem` by default — sharper than shadcn's `0.625rem`):
+
+```css
+:root {
+  --radius: 0.5rem; /* make it rounder */
+}
+```
