@@ -1,0 +1,124 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "mono-ui",
+  "homepage": "https://mono-ui.dev",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "A button component with multiple variants and sizes.",
+      "dependencies": ["class-variance-authority", "@radix-ui/react-slot"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/button.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Displays a badge or a component that looks like a badge.",
+      "dependencies": ["class-variance-authority"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/badge.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Displays a card with header, content, and footer.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/card.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Displays a form input field.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/input.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "Renders an accessible label for form controls.",
+      "dependencies": ["@radix-ui/react-label", "class-variance-authority"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/label.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Visually or semantically separates content.",
+      "dependencies": ["@radix-ui/react-separator"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/separator.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Use to show a placeholder while content is loading.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/skeleton.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "An image element with a fallback for representing the user.",
+      "dependencies": ["@radix-ui/react-avatar"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/avatar.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "A set of layered sections of content.",
+      "dependencies": ["@radix-ui/react-tabs"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/tabs.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "A popup that displays information related to an element.",
+      "dependencies": ["@radix-ui/react-tooltip"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/tooltip.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "A window overlaid on either the primary window.",
+      "dependencies": ["@radix-ui/react-dialog", "lucide-react"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/dialog.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Displays a list of options for the user to pick from.",
+      "dependencies": ["@radix-ui/react-select", "lucide-react"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/select.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "Displays a menu to the user triggered by a button.",
+      "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/mono-ui/ui/dropdown-menu.tsx", "type": "registry:component" }]
+    }
+  ]
+}
