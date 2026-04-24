@@ -3,6 +3,8 @@ title: Button
 description: Displays a button or a component that looks like a button.
 ---
 
+<ButtonDemo />
+
 ## Installation
 
 ```bash
@@ -13,30 +15,43 @@ npx mono-ui add button
 
 ```tsx
 import { Button } from "@/components/ui/button"
-
-export default function Page() {
-  return <Button>Click me</Button>
-}
 ```
 
-## Variants
-
 ```tsx
-<Button variant="default">Default</Button>
-<Button variant="destructive">Destructive</Button>
-<Button variant="outline">Outline</Button>
-<Button variant="secondary">Secondary</Button>
-<Button variant="ghost">Ghost</Button>
-<Button variant="link">Link</Button>
+<Button variant="outline">Button</Button>
 ```
 
-## Sizes
+## Examples
+
+### With Icon
 
 ```tsx
-<Button size="sm">Small</Button>
-<Button size="default">Default</Button>
-<Button size="lg">Large</Button>
-<Button size="icon">
-  <PlusIcon />
+import { Mail } from "lucide-react"
+
+<Button>
+  <Mail className="mr-2 h-4 w-4" /> Login with Email
+</Button>
+```
+
+### Loading
+
+```tsx
+import { Loader2 } from "lucide-react"
+
+<Button disabled>
+  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+  Please wait
+</Button>
+```
+
+### As Child
+
+Use the `asChild` prop to render as a different element:
+
+```tsx
+import Link from "next/link"
+
+<Button asChild>
+  <Link href="/login">Login</Link>
 </Button>
 ```

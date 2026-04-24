@@ -1,0 +1,62 @@
+---
+title: Spinner
+description: An animated loading indicator for async operations.
+---
+
+<SpinnerDemo />
+
+## Installation
+
+```bash
+npx mono-ui add spinner
+```
+
+## Usage
+
+```tsx
+import { Spinner } from "@/components/ui/spinner"
+```
+
+```tsx
+<Spinner />
+```
+
+## Examples
+
+### Sizes
+
+```tsx
+<div className="flex items-center gap-4">
+  <Spinner size="sm" />
+  <Spinner />
+  <Spinner size="lg" />
+</div>
+```
+
+### In a Button
+
+```tsx
+import { Button } from "@/components/ui/button"
+
+<Button disabled>
+  <Spinner size="sm" className="mr-2" />
+  Loading...
+</Button>
+```
+
+### Full-page Overlay
+
+```tsx
+<div className="fixed inset-0 flex items-center justify-center bg-background/80">
+  <Spinner size="lg" />
+</div>
+```
+
+### Inline
+
+```tsx
+<p className="flex items-center gap-2 text-sm text-muted-foreground">
+  <Spinner size="sm" />
+  Fetching data...
+</p>
+```

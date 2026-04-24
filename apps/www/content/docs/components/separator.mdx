@@ -3,6 +3,8 @@ title: Separator
 description: Visually or semantically separates content.
 ---
 
+<SeparatorDemo />
+
 ## Installation
 
 ```bash
@@ -13,24 +15,9 @@ npx mono-ui add separator
 
 ```tsx
 import { Separator } from "@/components/ui/separator"
-
-export default function Page() {
-  return (
-    <div>
-      <p>Above the separator</p>
-      <Separator className="my-4" />
-      <p>Below the separator</p>
-    </div>
-  )
-}
 ```
 
-## Vertical
-
 ```tsx
-<div className="flex h-5 items-center gap-4">
-  <span>Left</span>
-  <Separator orientation="vertical" />
-  <span>Right</span>
-</div>
+<Separator />
+<Separator orientation="vertical" />
 ```

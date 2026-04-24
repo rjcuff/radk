@@ -5,41 +5,55 @@ description: How to install and configure mono-ui in your project.
 
 ## Prerequisites
 
-- Node.js 18+
-- A React project (Next.js, Vite, etc.)
-- Tailwind CSS configured
+Before you begin, make sure you have:
 
-## 1. Run init
+- **Node.js 18+**
+- A React project (Next.js, Vite, Remix, etc.)
+- **Tailwind CSS** configured
+
+## Initialize
+
+Run the `init` command to set up your project:
 
 ```bash
 npx mono-ui init
 ```
 
-This creates a `components.json` in your project root and installs the base dependencies:
-`clsx`, `tailwind-merge`, `class-variance-authority`.
+This will:
 
-## 2. Add components
+1. Create a `components.json` configuration file
+2. Install base dependencies (`clsx`, `tailwind-merge`, `class-variance-authority`)
+3. Set up your component aliases
+
+## Add Components
+
+Use the `add` command to install components:
 
 ```bash
 npx mono-ui add button
-npx mono-ui add button card dialog
 ```
 
-Each component is copied as source code into `src/components/ui/`.
+You can add multiple components at once:
 
-## 3. Import and use
+```bash
+npx mono-ui add button card input dialog
+```
+
+Each component is copied as source code into your `src/components/ui/` directory.
+
+## Import and Use
 
 ```tsx
 import { Button } from "@/components/ui/button"
 
 export default function Page() {
-  return <Button>Hello mono-ui</Button>
+  return <Button variant="outline">Click me</Button>
 }
 ```
 
 ## components.json
 
-The `components.json` file controls where components are installed and how imports are resolved:
+The `init` command creates a `components.json` file in your project root. This controls where components are installed and how imports resolve:
 
 ```json
 {
@@ -57,5 +71,20 @@ The `components.json` file controls where components are installed and how impor
     "utils": "@/lib/utils",
     "ui": "@/components/ui"
   }
+}
+```
+
+## Manual Installation
+
+If you prefer not to use the CLI, you can copy component source files directly from the [registry](/docs/components/button) into your project.
+
+Make sure you have the `cn` utility:
+
+```ts title="lib/utils.ts"
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }
 ```

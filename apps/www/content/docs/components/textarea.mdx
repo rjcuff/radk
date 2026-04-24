@@ -1,0 +1,69 @@
+---
+title: Textarea
+description: Displays a multi-line text input field.
+---
+
+<TextareaDemo />
+
+## Installation
+
+```bash
+npx mono-ui add textarea
+```
+
+## Usage
+
+```tsx
+import { Textarea } from "@/components/ui/textarea"
+```
+
+```tsx
+<Textarea placeholder="Type your message here." />
+```
+
+## Examples
+
+### With Label
+
+```tsx
+import { Textarea } from "@/components/ui/textarea"
+import { Label } from "@/components/ui/label"
+
+<div className="grid gap-1.5">
+  <Label htmlFor="message">Your message</Label>
+  <Textarea id="message" placeholder="Type your message here." />
+</div>
+```
+
+### Disabled
+
+```tsx
+<Textarea placeholder="This is disabled." disabled />
+```
+
+### With Character Count
+
+```tsx
+"use client"
+
+import { useState } from "react"
+
+export function TextareaWithCount() {
+  const [value, setValue] = useState("")
+  const max = 200
+
+  return (
+    <div className="grid gap-1.5">
+      <Textarea
+        placeholder="Write your bio..."
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        maxLength={max}
+      />
+      <p className="text-xs text-muted-foreground text-right">
+        {value.length}/{max}
+      </p>
+    </div>
+  )
+}
+```

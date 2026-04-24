@@ -1,0 +1,68 @@
+---
+title: Registry
+description: How the mono-ui component registry works.
+---
+
+The mono-ui registry is a JSON-based system for distributing component source code. It's how `npx mono-ui add button` knows what to download and install.
+
+## How It Works
+
+```
+registry.json          ← manifest of all components
+  ↓
+public/r/mono-ui/
+  ├── button.json      ← component source + metadata
+  ├── card.json
+  └── ...
+```
+
+Each component JSON contains:
+
+- **source code** — the actual `.tsx` file content
+- **npm dependencies** — packages to install
+- **registry dependencies** — other mono-ui components required
+- **CSS variables** — any theme variables the component needs
+
+## Component JSON Structure
+
+```json
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "button",
+  "type": "registry:ui",
+  "title": "Button",
+  "description": "A button component with multiple variants.",
+  "dependencies": [
+    "class-variance-authority",
+    "@radix-ui/react-slot"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/mono-ui/ui/button.tsx",
+      "type": "registry:component",
+      "content": "// full source code..."
+    }
+  ],
+  "cssVars": {}
+}
+```
+
+## Item Types
+
+| Type | Install Path | Purpose |
+|------|-------------|---------|
+| `registry:ui` | `@/components/ui/` | Core UI primitives |
+| `registry:component` | `@/components/` | Composed components |
+| `registry:hook` | `@/hooks/` | React hooks |
+| `registry:lib` | `@/lib/` | Utility functions |
+
+## Building the Registry
+
+Run the build script to regenerate the registry JSON from source:
+
+```bash
+pnpm registry:build
+```
+
+This reads `apps/www/registry.json`, reads each component's source file, and outputs to `apps/www/public/r/`.

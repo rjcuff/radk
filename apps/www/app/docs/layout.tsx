@@ -1,6 +1,15 @@
 import { DocsLayout } from "fumadocs-ui/layouts/docs"
 import type { ReactNode } from "react"
+import type { Metadata } from "next"
 import { source } from "@/lib/source"
+
+export const metadata: Metadata = {
+  title: {
+    default: "Docs",
+    template: "%s | mono-ui",
+  },
+  description: "Documentation for mono-ui components.",
+}
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (

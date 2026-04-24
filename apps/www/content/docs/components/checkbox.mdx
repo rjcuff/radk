@@ -1,0 +1,72 @@
+---
+title: Checkbox
+description: A control that allows the user to toggle between checked and not checked.
+---
+
+<CheckboxDemo />
+
+## Installation
+
+```bash
+npx mono-ui add checkbox
+```
+
+## Usage
+
+```tsx
+import { Checkbox } from "@/components/ui/checkbox"
+```
+
+```tsx
+<Checkbox id="terms" />
+```
+
+## Examples
+
+### With Label
+
+```tsx
+import { Checkbox } from "@/components/ui/checkbox"
+import { Label } from "@/components/ui/label"
+
+<div className="flex items-center space-x-2">
+  <Checkbox id="terms" />
+  <Label htmlFor="terms">Accept terms and conditions</Label>
+</div>
+```
+
+### Disabled
+
+```tsx
+<div className="flex items-center space-x-2">
+  <Checkbox id="disabled" disabled />
+  <Label htmlFor="disabled" className="text-muted-foreground">
+    Disabled
+  </Label>
+</div>
+```
+
+### Controlled
+
+```tsx
+"use client"
+
+import { useState } from "react"
+
+export function CheckboxControlled() {
+  const [checked, setChecked] = useState(false)
+
+  return (
+    <div className="flex items-center space-x-2">
+      <Checkbox
+        id="controlled"
+        checked={checked}
+        onCheckedChange={setChecked}
+      />
+      <Label htmlFor="controlled">
+        {checked ? "Checked" : "Unchecked"}
+      </Label>
+    </div>
+  )
+}
+```

@@ -1,0 +1,70 @@
+---
+title: Switch
+description: A control that allows the user to toggle between on and off states.
+---
+
+<SwitchDemo />
+
+## Installation
+
+```bash
+npx mono-ui add switch
+```
+
+## Usage
+
+```tsx
+import { Switch } from "@/components/ui/switch"
+```
+
+```tsx
+<Switch />
+```
+
+## Examples
+
+### With Label
+
+```tsx
+import { Switch } from "@/components/ui/switch"
+import { Label } from "@/components/ui/label"
+
+<div className="flex items-center space-x-2">
+  <Switch id="notifications" />
+  <Label htmlFor="notifications">Email notifications</Label>
+</div>
+```
+
+### Disabled
+
+```tsx
+<div className="flex items-center space-x-2">
+  <Switch id="airplane" disabled />
+  <Label htmlFor="airplane" className="text-muted-foreground">
+    Airplane mode
+  </Label>
+</div>
+```
+
+### Controlled
+
+```tsx
+"use client"
+
+import { useState } from "react"
+
+export function SwitchControlled() {
+  const [enabled, setEnabled] = useState(false)
+
+  return (
+    <div className="flex items-center space-x-2">
+      <Switch
+        id="mode"
+        checked={enabled}
+        onCheckedChange={setEnabled}
+      />
+      <Label htmlFor="mode">{enabled ? "On" : "Off"}</Label>
+    </div>
+  )
+}
+```

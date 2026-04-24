@@ -1,0 +1,73 @@
+---
+title: Registry Getting Started
+description: Use the mono-ui registry to distribute your own components.
+---
+
+You can host your own registry and share components across projects — or with the community.
+
+## Create a Registry
+
+Create a `registry.json` at the root of your project:
+
+```json title="registry.json"
+{
+  "$schema": "https://mono-ui.dev/schema/registry.json",
+  "name": "my-org",
+  "homepage": "https://my-org.dev",
+  "items": [
+    {
+      "name": "my-button",
+      "type": "registry:ui",
+      "title": "My Button",
+      "description": "Our custom button.",
+      "dependencies": ["class-variance-authority"],
+      "files": [
+        {
+          "path": "registry/ui/my-button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Build & Serve
+
+Run the build script to generate the registry JSON:
+
+```bash
+pnpm registry:build
+```
+
+This outputs component JSON files to `public/r/`. Deploy your app and the registry is live at `https://your-domain.dev/r`.
+
+## Consume a Custom Registry
+
+In any project's `components.json`, point to your registry:
+
+```json title="components.json"
+{
+  "registryUrl": "https://your-domain.dev/r"
+}
+```
+
+Then add components from it:
+
+```bash
+npx mono-ui add my-button
+```
+
+## Using Multiple Registries
+
+```json title="components.json"
+{
+  "registryUrl": "https://mono-ui.dev/r"
+}
+```
+
+You can also fetch components directly by URL:
+
+```bash
+npx mono-ui add https://your-domain.dev/r/mono-ui/my-button.json
+```

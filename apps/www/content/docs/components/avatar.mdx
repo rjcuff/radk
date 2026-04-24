@@ -3,6 +3,8 @@ title: Avatar
 description: An image element with a fallback for representing the user.
 ---
 
+<AvatarDemo />
+
 ## Installation
 
 ```bash
@@ -12,14 +14,12 @@ npx mono-ui add avatar
 ## Usage
 
 ```tsx
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+```
 
-export default function Page() {
-  return (
-    <Avatar>
-      <AvatarImage src="https://github.com/rjcuff.png" alt="@rjcuff" />
-      <AvatarFallback>RJ</AvatarFallback>
-    </Avatar>
-  )
-}
+```tsx
+<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
 ```

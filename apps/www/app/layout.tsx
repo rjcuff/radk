@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import { Navbar } from "@/components/navbar"
+import { RootProvider } from "fumadocs-ui/provider"
 import "./globals.css"
 
 const inter = Inter({
@@ -11,17 +10,50 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mono-ui.dev"),
   title: {
     default: "mono-ui — Build interfaces faster. Own every pixel.",
     template: "%s | mono-ui",
   },
   description:
-    "Beautifully crafted components built on Radix UI and Tailwind CSS. Copy the source into your project — no packages, no lock-in, full control.",
-  keywords: ["ui components", "react", "tailwind", "radix ui", "design system"],
+    "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
+  keywords: [
+    "react components",
+    "ui library",
+    "tailwind css",
+    "radix ui",
+    "design system",
+    "open source",
+    "component library",
+    "mono-ui",
+  ],
+  authors: [{ name: "rjcuff", url: "https://github.com/rjcuff" }],
+  creator: "rjcuff",
   openGraph: {
-    title: "mono-ui",
-    description: "Beautifully crafted components you own.",
     type: "website",
+    locale: "en_US",
+    url: "https://mono-ui.dev",
+    siteName: "mono-ui",
+    title: "mono-ui — Build interfaces faster. Own every pixel.",
+    description:
+      "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "mono-ui — Build interfaces faster. Own every pixel.",
+    description:
+      "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 }
 
@@ -33,10 +65,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <body className="min-h-dvh bg-background font-sans antialiased">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Navbar />
+        <RootProvider>
           {children}
-        </ThemeProvider>
+        </RootProvider>
       </body>
     </html>
   )

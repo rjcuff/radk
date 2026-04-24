@@ -1,0 +1,67 @@
+---
+title: Toggle
+description: A two-state button that can be either on or off.
+---
+
+<ToggleDemo />
+
+## Installation
+
+```bash
+npx mono-ui add toggle
+```
+
+## Usage
+
+```tsx
+import { Toggle } from "@/components/ui/toggle"
+```
+
+```tsx
+<Toggle>Bold</Toggle>
+```
+
+## Examples
+
+### Variants
+
+```tsx
+<div className="flex items-center gap-2">
+  <Toggle>Default</Toggle>
+  <Toggle variant="outline">Outline</Toggle>
+</div>
+```
+
+### Sizes
+
+```tsx
+<div className="flex items-center gap-2">
+  <Toggle size="sm">Small</Toggle>
+  <Toggle>Default</Toggle>
+  <Toggle size="lg">Large</Toggle>
+</div>
+```
+
+### With Icon
+
+```tsx
+import { Bold, Italic, Underline } from "lucide-react"
+
+<div className="flex items-center gap-1">
+  <Toggle aria-label="Bold">
+    <Bold className="h-4 w-4" />
+  </Toggle>
+  <Toggle aria-label="Italic">
+    <Italic className="h-4 w-4" />
+  </Toggle>
+  <Toggle aria-label="Underline">
+    <Underline className="h-4 w-4" />
+  </Toggle>
+</div>
+```
+
+### Disabled
+
+```tsx
+<Toggle disabled>Disabled</Toggle>
+```

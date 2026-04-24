@@ -1,0 +1,114 @@
+---
+title: components.json
+description: Configuration for your project.
+---
+
+The `components.json` file holds configuration for your project. It tells the CLI where to install components, how to resolve imports, and which style to use.
+
+## Creating components.json
+
+Run `npx mono-ui init` to create the file automatically, or create it manually:
+
+```json title="components.json"
+{
+  "$schema": "https://mono-ui.dev/schema.json",
+  "style": "mono-ui",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "css": "app/globals.css",
+    "baseColor": "slate-blue",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registryUrl": "https://mono-ui.dev/r"
+}
+```
+
+## Fields
+
+### style
+
+The component style to use. Currently only `"mono-ui"` is supported.
+
+```json
+{
+  "style": "mono-ui"
+}
+```
+
+### rsc
+
+Whether your project uses React Server Components. Defaults to `true`.
+
+```json
+{
+  "rsc": true
+}
+```
+
+### tsx
+
+Use TypeScript (`.tsx`) files. Set to `false` for JavaScript (`.jsx`). Defaults to `true`.
+
+```json
+{
+  "tsx": true
+}
+```
+
+### tailwind.css
+
+Path to your global CSS file relative to the project root.
+
+```json
+{
+  "tailwind": {
+    "css": "app/globals.css"
+  }
+}
+```
+
+### tailwind.cssVariables
+
+Use CSS variables for colors. Set to `false` to use Tailwind utility classes directly. Defaults to `true`.
+
+```json
+{
+  "tailwind": {
+    "cssVariables": true
+  }
+}
+```
+
+### aliases
+
+Path aliases for your project. Must match your `tsconfig.json` `paths`.
+
+```json
+{
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  }
+}
+```
+
+### registryUrl
+
+The registry URL to fetch components from. Defaults to `https://mono-ui.dev/r`.
+
+```json
+{
+  "registryUrl": "https://mono-ui.dev/r"
+}
+```

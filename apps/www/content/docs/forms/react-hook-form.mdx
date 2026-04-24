@@ -1,0 +1,131 @@
+---
+title: React Hook Form
+description: Building forms with react-hook-form and mono-ui.
+---
+
+mono-ui components work seamlessly with [React Hook Form](https://react-hook-form.com).
+
+## Installation
+
+```bash
+npm install react-hook-form zod @hookform/resolvers
+```
+
+## Basic Form
+
+```tsx
+"use client"
+
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+
+const schema = z.object({
+  email: z.string().email("Enter a valid email"),
+  password: z.string().min(8, "Password must be at least 8 characters"),
+})
+
+type FormValues = z.infer<typeof schema>
+
+export function LoginForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>({ resolver: zodResolver(schema) })
+
+  const onSubmit = async (data: FormValues) => {
+    await new Promise((r) => setTimeout(r, 1000))
+    console.log(data)
+  }
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <div className="grid gap-1.5">
+        <Label htmlFor="email">Email</Label>
+        <Input
+          id="email"
+          type="email"
+          placeholder="name@example.com"
+          {...register("email")}
+        />
+        {errors.email && (
+          <p className="text-xs text-destructive">{errors.email.message}</p>
+        )}
+      </div>
+
+      <div className="grid gap-1.5">
+        <Label htmlFor="password">Password</Label>
+        <Input
+          id="password"
+          type="password"
+          {...register("password")}
+        />
+        {errors.password && (
+          <p className="text-xs text-destructive">{errors.password.message}</p>
+        )}
+      </div>
+
+      <Button type="submit" disabled={isSubmitting} className="w-full">
+        {isSubmitting ? "Signing in..." : "Sign in"}
+      </Button>
+    </form>
+  )
+}
+```
+
+## Checkbox with Controller
+
+```tsx
+import { Controller } from "react-hook-form"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Label } from "@/components/ui/label"
+
+<Controller
+  name="terms"
+  control={control}
+  render={({ field }) => (
+    <div className="flex items-center gap-2">
+      <Checkbox
+        id="terms"
+        checked={field.value}
+        onCheckedChange={field.onChange}
+      />
+      <Label htmlFor="terms">I accept the terms and conditions</Label>
+    </div>
+  )}
+/>
+```
+
+## Select with Controller
+
+```tsx
+import { Controller } from "react-hook-form"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+
+<Controller
+  name="role"
+  control={control}
+  render={({ field }) => (
+    <Select onValueChange={field.onChange} defaultValue={field.value}>
+      <SelectTrigger>
+        <SelectValue placeholder="Select a role" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="admin">Admin</SelectItem>
+        <SelectItem value="member">Member</SelectItem>
+        <SelectItem value="viewer">Viewer</SelectItem>
+      </SelectContent>
+    </Select>
+  )}
+/>
+```

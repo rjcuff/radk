@@ -1,7 +1,9 @@
 ---
 title: Tooltip
-description: A popup that displays information related to an element when focused or hovered.
+description: A popup that displays information related to an element on hover.
 ---
+
+<TooltipDemo />
 
 ## Installation
 
@@ -14,19 +16,19 @@ npx mono-ui add tooltip
 ```tsx
 import {
   Tooltip,
-  TooltipTrigger,
   TooltipContent,
   TooltipProvider,
+  TooltipTrigger,
 } from "@/components/ui/tooltip"
+```
 
-export default function Page() {
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger>Hover me</TooltipTrigger>
-        <TooltipContent>This is a tooltip</TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  )
-}
+```tsx
+<TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger>Hover</TooltipTrigger>
+    <TooltipContent>
+      <p>Add to library</p>
+    </TooltipContent>
+  </Tooltip>
+</TooltipProvider>
 ```

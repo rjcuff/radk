@@ -1,29 +1,53 @@
 ---
 title: Introduction
-description: Beautiful components built with Tailwind CSS and Radix UI.
+description: Beautifully designed components built with Radix UI and Tailwind CSS.
 ---
 
-## What is mono-ui?
+This is not a component library. It's how you build your component library.
 
-mono-ui is a collection of reusable components built on top of [Radix UI](https://radix-ui.com) and styled with [Tailwind CSS](https://tailwindcss.com).
+mono-ui gives you the actual component source code. You own it. You customize it. No black-box packages, no style overrides, no workarounds.
 
-Unlike traditional component libraries, mono-ui gives you the **source code** — not a black-box npm package. Use the CLI to copy exactly what you need into your project, then own it completely.
+## Philosophy
+
+- **Open Code** — Every component is copied into your project as source. Full transparency, full control.
+- **Composition** — All components share a consistent, composable API built on [Radix UI](https://radix-ui.com).
+- **Distribution** — A CLI and registry schema make it easy to add components across projects.
+- **Beautiful Defaults** — Carefully chosen styles so your UI looks great out of the box.
 
 ## Quick Start
 
+Initialize mono-ui in your project:
+
 ```bash
 npx mono-ui init
-npx mono-ui add button
 ```
 
-## Components
+Then add the components you need:
 
-Browse the components in the sidebar. Each one includes:
+```bash
+npx mono-ui add button card input
+```
 
-- Live preview
-- Installation command
-- Copy-paste source code
+Import and use:
 
-## Theme
+```tsx
+import { Button } from "@/components/ui/button"
 
-mono-ui uses a **slate-blue** primary color with sharp `0.375rem` border radius — tuned for clean, professional interfaces.
+export default function Page() {
+  return <Button>Click me</Button>
+}
+```
+
+## FAQ
+
+### Is this a component library?
+
+No. mono-ui is a code distribution tool. You get the source code, not an npm dependency. This means you can modify any component to fit your needs.
+
+### Can I use this with other frameworks?
+
+mono-ui is built for React. It works with Next.js, Vite, Remix, and any React-based framework that supports Tailwind CSS.
+
+### How is this different from shadcn/ui?
+
+mono-ui follows the same philosophy as shadcn/ui — open code, composable components, CLI distribution. Think of it as a starting point for your own design system.

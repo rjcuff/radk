@@ -1,0 +1,84 @@
+---
+title: CLI
+description: Use the mono-ui CLI to add components to your project.
+---
+
+The `mono-ui` CLI lets you initialize your project and add components from the registry.
+
+## init
+
+Initialize mono-ui in a new project:
+
+```bash
+npx mono-ui init
+```
+
+You will be asked a few questions:
+
+```
+Where is your global CSS file? › app/globals.css
+Configure the components alias: › @/components
+Configure the utils alias: › @/lib/utils
+```
+
+This creates a `components.json` file and installs the base dependencies.
+
+### Options
+
+| Option | Description |
+|--------|-------------|
+| `-y, --yes` | Skip prompts, use defaults |
+| `-c, --cwd <dir>` | Working directory (default: `process.cwd()`) |
+
+## add
+
+Add a component to your project:
+
+```bash
+npx mono-ui add button
+```
+
+You can add multiple components at once:
+
+```bash
+npx mono-ui add button card dialog select
+```
+
+The CLI will:
+
+1. Fetch the component from the registry
+2. Resolve and fetch dependencies
+3. Install npm packages
+4. Write component files to `src/components/ui/`
+
+### Options
+
+| Option | Description |
+|--------|-------------|
+| `-y, --yes` | Skip confirmation |
+| `--dry-run` | Preview what would be installed without writing files |
+| `-c, --cwd <dir>` | Working directory |
+
+### Dry run
+
+Preview what a component add would do:
+
+```bash
+npx mono-ui add button --dry-run
+```
+
+## diff
+
+Check if a locally installed component is up to date with the registry:
+
+```bash
+npx mono-ui diff button
+```
+
+Output:
+
+```
+  button: up to date
+  card: differs from registry
+  Run `mono-ui add --yes card` to update
+```

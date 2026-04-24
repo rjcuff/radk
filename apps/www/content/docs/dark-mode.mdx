@@ -1,0 +1,77 @@
+---
+title: Dark Mode
+description: Adding dark mode to your app.
+---
+
+mono-ui ships with full dark mode support using CSS variables and `next-themes`.
+
+## Setup
+
+### 1. Install next-themes
+
+```bash
+npm install next-themes
+```
+
+### 2. Add ThemeProvider
+
+Wrap your root layout with the provider:
+
+```tsx title="app/layout.tsx"
+import { ThemeProvider } from "next-themes"
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  )
+}
+```
+
+The `suppressHydrationWarning` on `<html>` prevents a React warning caused by `next-themes` setting the class server-side.
+
+### 3. Add a theme toggle
+
+```tsx title="components/theme-toggle.tsx"
+"use client"
+
+import { Moon, Sun } from "lucide-react"
+import { useTheme } from "next-themes"
+
+export function ThemeToggle() {
+  const { setTheme, resolvedTheme } = useTheme()
+
+  return (
+    <button
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      aria-label="Toggle theme"
+    >
+      <Sun className="h-4 w-4 rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-4 w-4 rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
+    </button>
+  )
+}
+```
+
+## How It Works
+
+mono-ui uses a `.dark` class on the `<html>` element to switch themes. All CSS variables are redefined under `.dark`:
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --primary: oklch(0.47 0.19 264);
+}
+
+.dark {
+  --background: oklch(0.1 0.015 255);
+  --primary: oklch(0.62 0.19 264);
+}
+```
+
+Because all components reference `var(--primary)` rather than hardcoded colors, dark mode works automatically for every component.
