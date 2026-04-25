@@ -11,68 +11,65 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <div className="relative flex min-h-screen flex-col bg-background">
+    <div className="flex h-screen flex-col overflow-hidden bg-background">
       <Navbar />
-      <main className="flex-1">
-        {/* Hero */}
-        <section className="mx-auto flex max-w-screen-2xl flex-col items-center gap-3 px-4 pb-8 pt-12 sm:gap-4 sm:px-6 md:pb-12 md:pt-24 lg:pb-16 lg:pt-32">
-          <div className="inline-flex items-center rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
-            Now in early access
-            <span className="ml-1">→</span>
+
+      {/* Single-viewport layout */}
+      <main className="flex flex-1 overflow-hidden">
+        {/* Left — hero */}
+        <div className="flex w-full flex-col justify-center px-8 py-10 sm:px-12 lg:w-1/2 lg:border-r-2 lg:border-foreground xl:px-16">
+          <div className="inline-flex w-fit items-center border-2 border-foreground px-2.5 py-1 text-xs font-bold shadow-[2px_2px_0_0_var(--neo-shadow-color)] mb-6">
+            Early access
           </div>
-          <h1 className="max-w-3xl text-center text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            The Best Friend Your UI Ever Had
+          <h1 className="text-4xl font-black leading-none tracking-tighter sm:text-5xl xl:text-6xl">
+            The Best Friend<br />Your UI Ever Had
           </h1>
-          <p className="max-w-[42rem] text-center text-sm text-muted-foreground sm:text-base md:text-lg">
-            Beautiful, accessible React components you copy into your project.
-            Built on Radix UI and Tailwind CSS. No dependencies. Full control.
+          <p className="mt-4 max-w-sm text-sm text-muted-foreground sm:text-base">
+            Accessible React components you copy into your project. Built on Radix UI and Tailwind CSS. No lock-in. Full control.
           </p>
-          <div className="flex items-center gap-3 pt-2">
+          <div className="mt-8 flex items-center gap-4">
             <Link
               href="/docs"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              className="inline-flex h-11 items-center border-2 border-foreground bg-primary px-6 text-sm font-bold text-primary-foreground shadow-[4px_4px_0_0_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
             >
               Get Started
             </Link>
             <Link
               href="/docs/components/button"
-              className="inline-flex h-10 items-center justify-center rounded-md border border-border bg-background px-6 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+              className="inline-flex h-11 items-center border-2 border-foreground bg-background px-6 text-sm font-bold text-foreground shadow-[4px_4px_0_0_var(--neo-shadow-color)] transition-all hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none"
             >
-              View Components
+              Components
             </Link>
           </div>
-        </section>
+          <div className="mt-10 flex items-center gap-6 text-xs font-bold uppercase tracking-widest text-muted-foreground">
+            <span className="hidden sm:inline">21 Components</span>
+            <span className="hidden sm:inline text-border">—</span>
+            <span className="hidden sm:inline">TypeScript</span>
+            <span className="hidden sm:inline text-border">—</span>
+            <span>Open Source</span>
+          </div>
+        </div>
 
-        {/* Component showcase */}
-        <section className="mx-auto max-w-screen-2xl px-4 pb-12 sm:px-6 md:pb-16">
+        {/* Right — live showcase */}
+        <div className="hidden lg:flex lg:w-1/2 flex-col justify-center overflow-hidden px-8 py-10 xl:px-12">
           <ComponentShowcase />
-        </section>
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-screen-2xl flex-col items-center gap-2 px-4 py-6 text-center sm:flex-row sm:justify-between sm:px-6 sm:text-left">
-          <p className="text-sm text-muted-foreground">
+      <footer className="border-t-2 border-foreground bg-foreground text-background">
+        <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-6 py-3">
+          <p className="text-xs font-bold">
             Built by{" "}
-            <a
-              href="https://github.com/rjcuff"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-foreground"
-            >
+            <a href="https://github.com/rjcuff" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary">
               rjcuff
             </a>
-            . The source code is available on{" "}
-            <a
-              href="https://github.com/rjcuff/radk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline underline-offset-4 hover:text-foreground"
-            >
+            {" "}· Source on{" "}
+            <a href="https://github.com/rjcuff/radk" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 hover:text-primary">
               GitHub
             </a>
-            .
           </p>
+          <p className="text-xs font-bold uppercase tracking-widest opacity-50">radk © 2025</p>
         </div>
       </footer>
     </div>

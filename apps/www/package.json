@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "registry:build": "node --loader ts-node/esm scripts/build-registry.mts"

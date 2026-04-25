@@ -6,33 +6,32 @@ import { MobileNav } from "./mobile-nav"
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b-2 border-foreground bg-background">
       <div className="mx-auto flex h-14 max-w-screen-2xl items-center px-4 sm:px-6">
         <MobileNav />
-        <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="/logo.png" alt="radk" width={24} height={24} className="rounded-sm" />
-          <span className="text-sm font-bold">radk</span>
+        <Link href="/" className="mr-6 flex items-center gap-2">
+          <span className="text-sm font-black tracking-tight">radk</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-1 text-sm">
           <Link
             href="/docs"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="px-3 py-1.5 font-bold border-2 border-transparent hover:border-foreground hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] transition-all"
           >
             Docs
           </Link>
           <Link
             href="/docs/components/button"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="px-3 py-1.5 font-bold border-2 border-transparent hover:border-foreground hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] transition-all"
           >
             Components
           </Link>
         </nav>
-        <div className="ml-auto flex items-center gap-1">
+        <div className="ml-auto flex items-center gap-2">
           <a
             href="https://github.com/rjcuff/radk"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-foreground"
+            className="inline-flex h-9 w-9 items-center justify-center border-2 border-transparent hover:border-foreground hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] transition-all"
             aria-label="GitHub"
           >
             <Github className="h-4 w-4" />
