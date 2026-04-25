@@ -1,0 +1,55 @@
+---
+title: Date Picker
+description: A date picker combining calendar, popover, and button.
+---
+
+<DatePickerDemo />
+
+## Installation
+
+```bash
+npx radk-cli@latest add date-picker
+```
+
+## Usage
+
+```tsx
+import { DatePicker } from "@/components/ui/date-picker"
+```
+
+```tsx
+const [date, setDate] = React.useState<Date | undefined>()
+
+<DatePicker date={date} onDateChange={setDate} placeholder="Pick a date" />
+```
+
+## Props
+
+| Prop | Type | Description |
+|---|---|---|
+| `date` | `Date \| undefined` | The selected date (controlled) |
+| `onDateChange` | `(date: Date \| undefined) => void` | Called when a date is selected |
+| `placeholder` | `string` | Text shown when no date is selected |
+| `className` | `string` | Additional classes for the trigger button |
+
+## Examples
+
+### With Form
+
+Combine with the `Form` component and react-hook-form:
+
+```tsx
+<FormField
+  control={form.control}
+  name="date"
+  render={({ field }) => (
+    <FormItem>
+      <FormLabel>Date</FormLabel>
+      <FormControl>
+        <DatePicker date={field.value} onDateChange={field.onChange} />
+      </FormControl>
+      <FormMessage />
+    </FormItem>
+  )}
+/>
+```

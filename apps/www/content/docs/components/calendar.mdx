@@ -1,0 +1,49 @@
+---
+title: Calendar
+description: A date picker calendar built on react-day-picker.
+---
+
+<CalendarDemo />
+
+## Installation
+
+```bash
+npx radk-cli@latest add calendar
+```
+
+## Usage
+
+```tsx
+import { Calendar } from "@/components/ui/calendar"
+```
+
+```tsx
+const [date, setDate] = React.useState<Date | undefined>(new Date())
+
+<Calendar mode="single" selected={date} onSelect={setDate} />
+```
+
+## Examples
+
+### Single Date
+
+```tsx
+<Calendar mode="single" selected={date} onSelect={setDate} />
+```
+
+### Date Range
+
+```tsx
+<Calendar
+  mode="range"
+  selected={range}
+  onSelect={setRange}
+  numberOfMonths={2}
+/>
+```
+
+### Multiple Dates
+
+```tsx
+<Calendar mode="multiple" selected={dates} onSelect={setDates} />
+```

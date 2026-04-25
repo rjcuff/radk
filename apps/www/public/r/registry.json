@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://mono-ui.dev/schema/registry.json",
   "name": "radk",
   "homepage": "https://radk.sh",
@@ -178,6 +178,42 @@
       "description": "Augments native scroll functionality for custom, cross-browser styling."
     },
     {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "description": "An opinionated toast notification component built on Sonner."
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Fast, composable command palette with keyboard navigation."
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A date picker calendar built on react-day-picker."
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "Accessible form field primitives built on react-hook-form."
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "A date picker combining calendar, popover, and button."
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Autocomplete input and command palette with filtering."
+    },
+    {
       "name": "hero",
       "type": "registry:block",
       "title": "Hero",
@@ -236,7 +272,36 @@
       "type": "registry:block",
       "title": "Settings Form",
       "description": "An account settings page with profile fields, notification toggles, and security options."
+    },
+    {
+      "name": "navbar",
+      "type": "registry:block",
+      "title": "Navbar",
+      "description": "Top navigation bar with logo, nav links, mobile hamburger menu, and CTA button."
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:block",
+      "title": "Sidebar",
+      "description": "Left navigation sidebar with icon items, collapsible sections, and active states."
+    },
+    {
+      "name": "signup-form",
+      "type": "registry:block",
+      "title": "Signup Form",
+      "description": "Registration form with name, email, password fields, and terms acceptance."
+    },
+    {
+      "name": "footer",
+      "type": "registry:block",
+      "title": "Footer",
+      "description": "Multi-column footer with links, social icons, newsletter signup, and copyright."
+    },
+    {
+      "name": "profile-card",
+      "type": "registry:block",
+      "title": "Profile Card",
+      "description": "User profile card with avatar, bio, follower stats, and action buttons."
     }
   ]
 }
-

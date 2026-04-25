@@ -1,0 +1,23 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "navbar",
+  "type": "registry:block",
+  "title": "Navbar",
+  "description": "Top navigation bar with logo, nav links, mobile hamburger menu, and CTA button.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "sheet"
+  ],
+  "files": [
+    {
+      "path": "registry/radk/blocks/navbar.tsx",
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Menu, X } from \"lucide-react\"\nimport { Button } from \"@/registry/radk/ui/button\"\nimport { Sheet, SheetContent, SheetTrigger } from \"@/registry/radk/ui/sheet\"\n\nconst navLinks = [\n  { label: \"Components\", href: \"#\" },\n  { label: \"Blocks\", href: \"#\" },\n  { label: \"Docs\", href: \"#\" },\n  { label: \"Changelog\", href: \"#\" },\n]\n\nexport function NavbarBlock() {\n  return (\n    <header className=\"border-b-2 border-foreground shadow-[0_4px_0_0_var(--neo-shadow-color)] bg-background\">\n      <div className=\"mx-auto max-w-6xl px-4 h-14 flex items-center justify-between\">\n        <a href=\"#\" className=\"text-xl font-black tracking-tight\">\n          radk\n        </a>\n\n        <nav className=\"hidden md:flex items-center gap-6\">\n          {navLinks.map((link) => (\n            <a\n              key={link.label}\n              href={link.href}\n              className=\"text-sm font-bold text-muted-foreground hover:text-foreground transition-colors\"\n            >\n              {link.label}\n            </a>\n          ))}\n        </nav>\n\n        <div className=\"flex items-center gap-2\">\n          <Button size=\"sm\" className=\"hidden md:inline-flex\">\n            Get Started\n          </Button>\n          <Sheet>\n            <SheetTrigger asChild>\n              <Button variant=\"ghost\" size=\"icon\" className=\"md:hidden\">\n                <Menu className=\"h-5 w-5\" />\n                <span className=\"sr-only\">Toggle menu</span>\n              </Button>\n            </SheetTrigger>\n            <SheetContent side=\"left\" className=\"w-64\">\n              <div className=\"mt-6 flex flex-col gap-1\">\n                <a href=\"#\" className=\"mb-4 text-xl font-black tracking-tight\">\n                  radk\n                </a>\n                {navLinks.map((link) => (\n                  <a\n                    key={link.label}\n                    href={link.href}\n                    className=\"py-2 text-sm font-bold text-muted-foreground hover:text-foreground transition-colors\"\n                  >\n                    {link.label}\n                  </a>\n                ))}\n                <Button size=\"sm\" className=\"mt-4 w-full\">\n                  Get Started\n                </Button>\n              </div>\n            </SheetContent>\n          </Sheet>\n        </div>\n      </div>\n    </header>\n  )\n}\n"
+    }
+  ],
+  "cssVars": {}
+}

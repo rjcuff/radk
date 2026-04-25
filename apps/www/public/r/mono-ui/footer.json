@@ -1,0 +1,24 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "footer",
+  "type": "registry:block",
+  "title": "Footer",
+  "description": "Multi-column footer with links, social icons, newsletter signup, and copyright.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "input",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "registry/radk/blocks/footer.tsx",
+      "type": "registry:component",
+      "content": "import * as React from \"react\"\nimport { Github, Twitter, Linkedin } from \"lucide-react\"\nimport { Button } from \"@/registry/radk/ui/button\"\nimport { Input } from \"@/registry/radk/ui/input\"\nimport { Separator } from \"@/registry/radk/ui/separator\"\n\nconst footerLinks = {\n  Product: [\"Components\", \"Blocks\", \"Templates\", \"Changelog\"],\n  Company: [\"About\", \"Blog\", \"Careers\", \"Press\"],\n  Legal: [\"Privacy\", \"Terms\", \"License\", \"Cookies\"],\n}\n\nexport function FooterBlock() {\n  return (\n    <footer className=\"border-t-2 border-foreground bg-background\">\n      <div className=\"mx-auto max-w-6xl px-6 py-12\">\n        <div className=\"grid grid-cols-1 gap-8 md:grid-cols-4\">\n          <div className=\"space-y-4\">\n            <span className=\"text-xl font-black tracking-tight\">radk</span>\n            <p className=\"text-sm text-muted-foreground leading-relaxed\">\n              Beautiful neobrutalist components you copy into your project.\n            </p>\n            <div className=\"flex gap-2\">\n              <Button variant=\"ghost\" size=\"icon\" aria-label=\"GitHub\">\n                <Github className=\"h-4 w-4\" />\n              </Button>\n              <Button variant=\"ghost\" size=\"icon\" aria-label=\"Twitter\">\n                <Twitter className=\"h-4 w-4\" />\n              </Button>\n              <Button variant=\"ghost\" size=\"icon\" aria-label=\"LinkedIn\">\n                <Linkedin className=\"h-4 w-4\" />\n              </Button>\n            </div>\n          </div>\n\n          {Object.entries(footerLinks).map(([group, links]) => (\n            <div key={group} className=\"space-y-3\">\n              <h3 className=\"text-sm font-black uppercase tracking-wider\">{group}</h3>\n              <ul className=\"space-y-2\">\n                {links.map((link) => (\n                  <li key={link}>\n                    <a\n                      href=\"#\"\n                      className=\"text-sm text-muted-foreground hover:text-foreground font-medium transition-colors\"\n                    >\n                      {link}\n                    </a>\n                  </li>\n                ))}\n              </ul>\n            </div>\n          ))}\n        </div>\n\n        <Separator className=\"my-8\" />\n\n        <div className=\"flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between\">\n          <p className=\"text-sm text-muted-foreground font-medium\">\n            © {new Date().getFullYear()} radk. All rights reserved.\n          </p>\n          <div className=\"flex gap-2\">\n            <Input\n              placeholder=\"Enter your email\"\n              className=\"w-48 h-9 text-sm\"\n              type=\"email\"\n            />\n            <Button size=\"sm\">Subscribe</Button>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}\n"
+    }
+  ],
+  "cssVars": {}
+}

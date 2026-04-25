@@ -10,3 +10,4 @@ build
 .env.production
 .DS_Store
 public/r/
+CLAUDE.md

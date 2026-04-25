@@ -1,0 +1,26 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "sidebar",
+  "type": "registry:block",
+  "title": "Sidebar",
+  "description": "Left navigation sidebar with icon items, collapsible sections, and active states.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "collapsible",
+    "separator",
+    "tooltip"
+  ],
+  "files": [
+    {
+      "path": "registry/radk/blocks/sidebar.tsx",
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport {\n  ChevronDown,\n  FolderOpen,\n  Home,\n  Inbox,\n  LayoutDashboard,\n  Settings,\n  Users,\n} from \"lucide-react\"\nimport { Badge } from \"@/registry/radk/ui/badge\"\nimport { Button } from \"@/registry/radk/ui/button\"\nimport { Collapsible, CollapsibleContent, CollapsibleTrigger } from \"@/registry/radk/ui/collapsible\"\nimport { Separator } from \"@/registry/radk/ui/separator\"\nimport { cn } from \"@/lib/utils\"\n\nconst navItems = [\n  { icon: Home, label: \"Dashboard\", active: true },\n  { icon: Inbox, label: \"Inbox\", badge: 12 },\n  { icon: Users, label: \"Team\" },\n  { icon: LayoutDashboard, label: \"Analytics\" },\n]\n\nconst projects = [\n  { label: \"Website Redesign\" },\n  { label: \"Mobile App\" },\n  { label: \"API Integration\" },\n]\n\nexport function SidebarBlock() {\n  const [projectsOpen, setProjectsOpen] = React.useState(true)\n\n  return (\n    <aside className=\"w-64 border-r-2 border-foreground h-screen flex flex-col bg-background\">\n      <div className=\"border-b-2 border-foreground p-4\">\n        <span className=\"text-xl font-black tracking-tight\">radk</span>\n      </div>\n\n      <nav className=\"flex-1 overflow-y-auto p-2 space-y-1\">\n        {navItems.map((item) => (\n          <button\n            key={item.label}\n            className={cn(\n              \"w-full flex items-center gap-3 px-3 py-2 text-sm font-bold transition-all\",\n              item.active\n                ? \"bg-primary text-primary-foreground border-2 border-foreground shadow-[2px_2px_0_0_var(--neo-shadow-color)]\"\n                : \"text-muted-foreground hover:text-foreground hover:bg-muted border-2 border-transparent\"\n            )}\n          >\n            <item.icon className=\"h-4 w-4 shrink-0\" />\n            <span className=\"flex-1 text-left\">{item.label}</span>\n            {item.badge && (\n              <Badge variant=\"secondary\" className=\"ml-auto text-xs px-1.5 py-0.5\">\n                {item.badge}\n              </Badge>\n            )}\n          </button>\n        ))}\n\n        <Collapsible open={projectsOpen} onOpenChange={setProjectsOpen}>\n          <CollapsibleTrigger asChild>\n            <button className=\"w-full flex items-center gap-3 px-3 py-2 text-sm font-bold text-muted-foreground hover:text-foreground transition-all border-2 border-transparent hover:bg-muted\">\n              <FolderOpen className=\"h-4 w-4 shrink-0\" />\n              <span className=\"flex-1 text-left\">Projects</span>\n              <ChevronDown\n                className={cn(\n                  \"h-4 w-4 transition-transform duration-200\",\n                  projectsOpen && \"rotate-180\"\n                )}\n              />\n            </button>\n          </CollapsibleTrigger>\n          <CollapsibleContent className=\"pl-9 space-y-1 pt-1\">\n            {projects.map((project) => (\n              <button\n                key={project.label}\n                className=\"w-full text-left px-3 py-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors\"\n              >\n                {project.label}\n              </button>\n            ))}\n          </CollapsibleContent>\n        </Collapsible>\n      </nav>\n\n      <div className=\"p-2\">\n        <Separator className=\"mb-2\" />\n        <Button variant=\"ghost\" className=\"w-full justify-start gap-3 font-bold text-muted-foreground\">\n          <Settings className=\"h-4 w-4\" />\n          Settings\n        </Button>\n        <div className=\"flex items-center gap-3 px-3 py-2 mt-1\">\n          <div className=\"h-8 w-8 border-2 border-foreground bg-primary flex items-center justify-center text-xs font-black text-primary-foreground\">\n            RC\n          </div>\n          <div className=\"flex-1 min-w-0\">\n            <p className=\"text-xs font-bold truncate\">Ryan Cuff</p>\n            <p className=\"text-xs text-muted-foreground truncate\">ryan@example.com</p>\n          </div>\n        </div>\n      </div>\n    </aside>\n  )\n}\n"
+    }
+  ],
+  "cssVars": {}
+}

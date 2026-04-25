@@ -1,0 +1,25 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "date-picker",
+  "type": "registry:ui",
+  "title": "Date Picker",
+  "description": "A date picker combining calendar, popover, and button.",
+  "dependencies": [
+    "date-fns",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "calendar",
+    "popover",
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/radk/ui/date-picker.tsx",
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { format } from \"date-fns\"\nimport { CalendarIcon } from \"lucide-react\"\nimport { Calendar } from \"@/registry/radk/ui/calendar\"\nimport { Button } from \"@/registry/radk/ui/button\"\nimport { Popover, PopoverContent, PopoverTrigger } from \"@/registry/radk/ui/popover\"\nimport { cn } from \"@/lib/utils\"\n\ninterface DatePickerProps {\n  date?: Date\n  onDateChange?: (date: Date | undefined) => void\n  placeholder?: string\n  className?: string\n}\n\nfunction DatePicker({ date, onDateChange, placeholder = \"Pick a date\", className }: DatePickerProps) {\n  return (\n    <Popover>\n      <PopoverTrigger asChild>\n        <Button\n          variant=\"outline\"\n          data-slot=\"date-picker\"\n          className={cn(\n            \"w-[240px] justify-start text-left font-normal\",\n            !date && \"text-muted-foreground\",\n            className\n          )}\n        >\n          <CalendarIcon className=\"mr-2 h-4 w-4\" />\n          {date ? format(date, \"PPP\") : <span>{placeholder}</span>}\n        </Button>\n      </PopoverTrigger>\n      <PopoverContent className=\"w-auto p-0\" align=\"start\">\n        <Calendar\n          mode=\"single\"\n          selected={date}\n          onSelect={onDateChange}\n          initialFocus\n        />\n      </PopoverContent>\n    </Popover>\n  )\n}\n\nexport { DatePicker }\n"
+    }
+  ],
+  "cssVars": {}
+}

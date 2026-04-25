@@ -265,6 +265,60 @@
       "files": [{ "path": "registry/radk/ui/scroll-area.tsx", "type": "registry:component" }]
     },
     {
+      "name": "sonner",
+      "type": "registry:ui",
+      "title": "Sonner",
+      "description": "An opinionated toast notification component built on Sonner.",
+      "dependencies": ["sonner"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/radk/ui/sonner.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Fast, composable command palette with keyboard navigation.",
+      "dependencies": ["cmdk", "lucide-react"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/radk/ui/command.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A date picker calendar built on react-day-picker.",
+      "dependencies": ["react-day-picker", "date-fns", "lucide-react"],
+      "registryDependencies": [],
+      "files": [{ "path": "registry/radk/ui/calendar.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "form",
+      "type": "registry:ui",
+      "title": "Form",
+      "description": "Accessible form field primitives built on react-hook-form.",
+      "dependencies": ["react-hook-form", "@radix-ui/react-slot"],
+      "registryDependencies": ["label"],
+      "files": [{ "path": "registry/radk/ui/form.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "A date picker combining calendar, popover, and button.",
+      "dependencies": ["date-fns", "lucide-react"],
+      "registryDependencies": ["calendar", "popover", "button"],
+      "files": [{ "path": "registry/radk/ui/date-picker.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Autocomplete input and command palette with filtering.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["command", "popover", "button"],
+      "files": [{ "path": "registry/radk/ui/combobox.tsx", "type": "registry:component" }]
+    },
+    {
       "name": "hero",
       "type": "registry:block",
       "title": "Hero",
@@ -353,6 +407,51 @@
       "dependencies": [],
       "registryDependencies": ["button", "card", "input", "label", "select", "separator", "switch"],
       "files": [{ "path": "registry/radk/blocks/settings-form.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:block",
+      "title": "Navbar",
+      "description": "Top navigation bar with logo, nav links, mobile hamburger menu, and CTA button.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "sheet"],
+      "files": [{ "path": "registry/radk/blocks/navbar.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:block",
+      "title": "Sidebar",
+      "description": "Left navigation sidebar with icon items, collapsible sections, and active states.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["badge", "button", "collapsible", "separator", "tooltip"],
+      "files": [{ "path": "registry/radk/blocks/sidebar.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "signup-form",
+      "type": "registry:block",
+      "title": "Signup Form",
+      "description": "Registration form with name, email, password fields, and terms acceptance.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button", "card", "checkbox", "input", "label", "separator"],
+      "files": [{ "path": "registry/radk/blocks/signup-form.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "footer",
+      "type": "registry:block",
+      "title": "Footer",
+      "description": "Multi-column footer with links, social icons, newsletter signup, and copyright.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["button", "input", "separator"],
+      "files": [{ "path": "registry/radk/blocks/footer.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "profile-card",
+      "type": "registry:block",
+      "title": "Profile Card",
+      "description": "User profile card with avatar, bio, follower stats, and action buttons.",
+      "dependencies": [],
+      "registryDependencies": ["avatar", "badge", "button", "card", "separator"],
+      "files": [{ "path": "registry/radk/blocks/profile-card.tsx", "type": "registry:component" }]
     }
   ]
 }

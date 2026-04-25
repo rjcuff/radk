@@ -1,0 +1,87 @@
+---
+title: Command
+description: Fast, composable command palette with keyboard navigation.
+---
+
+<CommandDemo />
+
+## Installation
+
+```bash
+npx radk-cli@latest add command
+```
+
+## Usage
+
+```tsx
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from "@/components/ui/command"
+```
+
+```tsx
+<Command>
+  <CommandInput placeholder="Type a command or search..." />
+  <CommandList>
+    <CommandEmpty>No results found.</CommandEmpty>
+    <CommandGroup heading="Suggestions">
+      <CommandItem>Calendar</CommandItem>
+      <CommandItem>Search Emoji</CommandItem>
+    </CommandGroup>
+  </CommandList>
+</Command>
+```
+
+## Examples
+
+### With Shortcuts
+
+```tsx
+<CommandItem>
+  Profile
+  <CommandShortcut>⌘P</CommandShortcut>
+</CommandItem>
+```
+
+### Dialog
+
+Use `CommandDialog` to show the palette in a modal:
+
+```tsx
+import { CommandDialog } from "@/components/ui/command"
+
+export function CommandMenu() {
+  const [open, setOpen] = React.useState(false)
+
+  React.useEffect(() => {
+    const down = (e: KeyboardEvent) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault()
+        setOpen((open) => !open)
+      }
+    }
+    document.addEventListener("keydown", down)
+    return () => document.removeEventListener("keydown", down)
+  }, [])
+
+  return (
+    <CommandDialog open={open} onOpenChange={setOpen}>
+      <CommandInput placeholder="Type a command or search..." />
+      <CommandList>
+        <CommandEmpty>No results found.</CommandEmpty>
+        <CommandGroup heading="Pages">
+          <CommandItem>Home</CommandItem>
+          <CommandItem>Dashboard</CommandItem>
+        </CommandGroup>
+      </CommandList>
+    </CommandDialog>
+  )
+}
+```

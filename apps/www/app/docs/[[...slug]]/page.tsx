@@ -43,6 +43,17 @@ import { TestimonialsBlockDemo } from "@/components/docs/blocks/testimonials-blo
 import { LoginFormBlockDemo } from "@/components/docs/blocks/login-form-block-demo"
 import { DataTableBlockDemo } from "@/components/docs/blocks/data-table-block-demo"
 import { SettingsFormBlockDemo } from "@/components/docs/blocks/settings-form-block-demo"
+import { SonnerDemo } from "@/components/docs/sonner-demo"
+import { CommandDemo } from "@/components/docs/command-demo"
+import { CalendarDemo } from "@/components/docs/calendar-demo"
+import { FormDemo } from "@/components/docs/form-demo"
+import { DatePickerDemo } from "@/components/docs/date-picker-demo"
+import { ComboboxDemo } from "@/components/docs/combobox-demo"
+import { NavbarBlockDemo } from "@/components/docs/blocks/navbar-block-demo"
+import { SidebarBlockDemo } from "@/components/docs/blocks/sidebar-block-demo"
+import { SignupFormBlockDemo } from "@/components/docs/blocks/signup-form-block-demo"
+import { FooterBlockDemo } from "@/components/docs/blocks/footer-block-demo"
+import { ProfileCardBlockDemo } from "@/components/docs/blocks/profile-card-block-demo"
 
 const customComponents = {
   ...defaultMdxComponents,
@@ -86,6 +97,17 @@ const customComponents = {
   LoginFormBlockDemo,
   DataTableBlockDemo,
   SettingsFormBlockDemo,
+  SonnerDemo,
+  CommandDemo,
+  CalendarDemo,
+  FormDemo,
+  DatePickerDemo,
+  ComboboxDemo,
+  NavbarBlockDemo,
+  SidebarBlockDemo,
+  SignupFormBlockDemo,
+  FooterBlockDemo,
+  ProfileCardBlockDemo,
 }
 
 export default async function Page({

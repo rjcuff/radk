@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "label",
   "type": "registry:ui",
@@ -19,4 +19,3 @@
   ],
   "cssVars": {}
 }
-

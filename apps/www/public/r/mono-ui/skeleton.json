@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "skeleton",
   "type": "registry:ui",
@@ -16,4 +16,3 @@
   ],
   "cssVars": {}
 }
-

@@ -1,0 +1,46 @@
+---
+title: Combobox
+description: Autocomplete input and command palette with filtering.
+---
+
+<ComboboxDemo />
+
+## Installation
+
+```bash
+npx radk-cli@latest add combobox
+```
+
+## Usage
+
+```tsx
+import { Combobox } from "@/components/ui/combobox"
+```
+
+```tsx
+const options = [
+  { value: "next.js", label: "Next.js" },
+  { value: "react", label: "React" },
+]
+
+const [value, setValue] = React.useState("")
+
+<Combobox
+  options={options}
+  value={value}
+  onValueChange={setValue}
+  placeholder="Select a framework..."
+/>
+```
+
+## Props
+
+| Prop | Type | Default |
+|---|---|---|
+| `options` | `{ value: string; label: string }[]` | Required |
+| `value` | `string` | — |
+| `onValueChange` | `(value: string) => void` | — |
+| `placeholder` | `string` | `"Select an option..."` |
+| `searchPlaceholder` | `string` | `"Search..."` |
+| `emptyMessage` | `string` | `"No results found."` |
+| `className` | `string` | — |

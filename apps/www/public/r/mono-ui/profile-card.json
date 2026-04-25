@@ -1,0 +1,24 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "profile-card",
+  "type": "registry:block",
+  "title": "Profile Card",
+  "description": "User profile card with avatar, bio, follower stats, and action buttons.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "avatar",
+    "badge",
+    "button",
+    "card",
+    "separator"
+  ],
+  "files": [
+    {
+      "path": "registry/radk/blocks/profile-card.tsx",
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Avatar, AvatarFallback } from \"@/registry/radk/ui/avatar\"\nimport { Badge } from \"@/registry/radk/ui/badge\"\nimport { Button } from \"@/registry/radk/ui/button\"\nimport { Card, CardContent, CardHeader } from \"@/registry/radk/ui/card\"\nimport { Separator } from \"@/registry/radk/ui/separator\"\n\nconst stats = [\n  { label: \"Followers\", value: \"12.4k\" },\n  { label: \"Following\", value: \"891\" },\n  { label: \"Posts\", value: \"248\" },\n]\n\nexport function ProfileCardBlock() {\n  const [following, setFollowing] = React.useState(false)\n\n  return (\n    <section className=\"py-20 px-6 flex items-center justify-center\">\n      <Card className=\"max-w-sm w-full\">\n        <CardHeader className=\"flex flex-col items-center gap-3 pb-2 text-center\">\n          <Avatar className=\"h-20 w-20 border-2 border-foreground shadow-[4px_4px_0_0_var(--neo-shadow-color)]\">\n            <AvatarFallback className=\"text-xl font-black bg-primary text-primary-foreground\">\n              BC\n            </AvatarFallback>\n          </Avatar>\n          <div className=\"space-y-1\">\n            <h2 className=\"text-xl font-black tracking-tight\">Bruce Wayne</h2>\n            <Badge variant=\"secondary\">Dark Knight</Badge>\n          </div>\n          <p className=\"text-sm text-muted-foreground max-w-xs leading-relaxed\">\n            Defending Gotham one night at a time. Billionaire by day, vigilante by night.\n          </p>\n        </CardHeader>\n        <CardContent className=\"space-y-4\">\n          <div className=\"flex justify-around\">\n            {stats.map((stat, i) => (\n              <React.Fragment key={stat.label}>\n                <div className=\"text-center\">\n                  <p className=\"text-lg font-black\">{stat.value}</p>\n                  <p className=\"text-xs text-muted-foreground font-medium\">{stat.label}</p>\n                </div>\n                {i < stats.length - 1 && (\n                  <Separator orientation=\"vertical\" className=\"h-10\" />\n                )}\n              </React.Fragment>\n            ))}\n          </div>\n          <Separator />\n          <div className=\"flex gap-2\">\n            <Button\n              className=\"flex-1\"\n              variant={following ? \"outline\" : \"default\"}\n              onClick={() => setFollowing(!following)}\n            >\n              {following ? \"Following\" : \"Follow\"}\n            </Button>\n            <Button variant=\"outline\" className=\"flex-1\">\n              Message\n            </Button>\n          </div>\n        </CardContent>\n      </Card>\n    </section>\n  )\n}\n"
+    }
+  ],
+  "cssVars": {}
+}

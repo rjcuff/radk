@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "slider",
   "type": "registry:ui",
@@ -18,4 +18,3 @@
   ],
   "cssVars": {}
 }
-
