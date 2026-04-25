@@ -67,7 +67,7 @@ export const componentsJsonSchema = z.object({
     lib: z.string().optional(),
     hooks: z.string().optional(),
   }),
-  registryUrl: z.string().default("https://radk.dev/r"),
+  registryUrl: z.string().default("https://radk.sh/r"),
 })
 
 export type ComponentsJson = z.infer<typeof componentsJsonSchema>

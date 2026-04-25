@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "settings-form",
   "type": "registry:block",
@@ -24,3 +24,4 @@
   ],
   "cssVars": {}
 }
+

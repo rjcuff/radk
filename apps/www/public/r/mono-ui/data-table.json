@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "data-table",
   "type": "registry:block",
@@ -22,3 +22,4 @@
   ],
   "cssVars": {}
 }
+

@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "collapsible",
   "type": "registry:ui",
@@ -18,3 +18,4 @@
   ],
   "cssVars": {}
 }
+

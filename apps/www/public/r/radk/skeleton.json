@@ -1,5 +1,5 @@
-{
-  "$schema": "https://radk.dev/schema/registry-item.json",
+﻿{
+  "$schema": "https://radk.sh/schema/registry-item.json",
   "name": "skeleton",
   "type": "registry:ui",
   "title": "Skeleton",
@@ -16,3 +16,4 @@
   ],
   "cssVars": {}
 }
+

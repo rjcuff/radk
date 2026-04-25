@@ -1,6 +1,6 @@
 import { registryItemSchema, type RegistryItem } from "./schema.js"
 
-export const REGISTRY_URL = "https://radk.dev/r"
+export const REGISTRY_URL = "https://radk.sh/r"
 
 export async function fetchRegistryItem(
   name: string,

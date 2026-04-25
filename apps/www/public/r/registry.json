@@ -1,7 +1,7 @@
-{
+﻿{
   "$schema": "https://mono-ui.dev/schema/registry.json",
   "name": "radk",
-  "homepage": "https://radk.dev",
+  "homepage": "https://radk.sh",
   "items": [
     {
       "name": "button",
@@ -239,3 +239,4 @@
     }
   ]
 }
+

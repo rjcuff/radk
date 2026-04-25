@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "sheet",
   "type": "registry:ui",
@@ -20,3 +20,4 @@
   ],
   "cssVars": {}
 }
+

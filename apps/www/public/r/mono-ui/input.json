@@ -1,4 +1,4 @@
-{
+﻿{
   "$schema": "https://mono-ui.dev/schema/registry-item.json",
   "name": "input",
   "type": "registry:ui",
@@ -16,3 +16,4 @@
   ],
   "cssVars": {}
 }
+

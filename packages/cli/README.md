@@ -1,6 +1,6 @@
 # radk-cli
 
-CLI for adding [radk](https://radk.dev) components to your React project.
+CLI for adding [radk](https://radk.sh) components to your React project.
 
 ## Usage
 
