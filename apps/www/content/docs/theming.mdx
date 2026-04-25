@@ -1,55 +1,137 @@
 ---
 title: Theming
-description: How radk's color system and CSS variables work.
+description: How radk's color system, CSS variables, and color themes work.
 ---
 
 ## CSS Variables
 
-radk uses CSS custom properties scoped to `:root` and `.dark`. All components reference semantic variable names, never hardcoded colors.
+radk uses CSS custom properties scoped to `:root` and `.dark`. All components reference semantic variable names, never hardcoded colors. Colors are defined in the **OKLCH** color space for perceptual uniformity across hues.
 
 ```css
 :root {
-  --primary: oklch(0.47 0.19 264);      /* slate-blue */
-  --primary-foreground: oklch(1 0 0);
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.13 0.015 255);
-  --radius: 0.375rem;
-  /* ... */
+  --background: oklch(0.98 0.012 90);
+  --foreground: oklch(0.07 0 0);
+  --primary: oklch(0.76 0.2 350);       /* pink — default */
+  --primary-foreground: oklch(0.07 0 0);
+  --border: oklch(0.07 0 0);
+  --radius: 0px;                         /* sharp corners */
+  --neo-shadow-color: oklch(0.07 0 0);   /* neobrutalism offset shadow */
 }
 ```
 
 ## Dark Mode
 
-Wrap your app in a `ThemeProvider` and toggle the `dark` class on `<html>`:
+radk uses `next-themes` with the `class` strategy. The `RootProvider` from `fumadocs-ui` handles this automatically in the docs. For your own app:
 
 ```tsx
 import { ThemeProvider } from "next-themes"
 
 export default function Layout({ children }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system">
+    <ThemeProvider attribute="class" defaultTheme="system" disableTransitionOnChange>
       {children}
     </ThemeProvider>
   )
 }
 ```
 
-## Customizing Colors
+## Color Themes
 
-Edit the CSS variables in your `globals.css` to match your brand. All components update automatically.
+radk ships 5 ready-made color themes. Each theme replaces `--primary`, `--accent`, and `--ring` while leaving the rest of the design system untouched.
+
+Copy any of the blocks below into your `globals.css` to change the primary color.
+
+### Pink (default)
+
+The default theme — no extra CSS needed. The `:root` block already sets this.
 
 ```css
 :root {
-  --primary: oklch(0.55 0.22 142); /* change to green */
+  --primary: oklch(0.76 0.2 350);
+  --primary-foreground: oklch(0.07 0 0);
+  --accent: oklch(0.76 0.2 350);
+  --accent-foreground: oklch(0.07 0 0);
+  --ring: oklch(0.76 0.2 350);
 }
+```
+
+### Green
+
+```css
+[data-theme-color="green"] {
+  --primary: oklch(0.72 0.26 140);
+  --primary-foreground: oklch(0.07 0 0);
+  --accent: oklch(0.72 0.26 140);
+  --accent-foreground: oklch(0.07 0 0);
+  --ring: oklch(0.72 0.26 140);
+}
+```
+
+### Blue
+
+```css
+[data-theme-color="blue"] {
+  --primary: oklch(0.64 0.26 250);
+  --primary-foreground: oklch(1 0 0);
+  --accent: oklch(0.64 0.26 250);
+  --accent-foreground: oklch(1 0 0);
+  --ring: oklch(0.64 0.26 250);
+}
+```
+
+### Orange
+
+```css
+[data-theme-color="orange"] {
+  --primary: oklch(0.78 0.22 52);
+  --primary-foreground: oklch(0.07 0 0);
+  --accent: oklch(0.78 0.22 52);
+  --accent-foreground: oklch(0.07 0 0);
+  --ring: oklch(0.78 0.22 52);
+}
+```
+
+### Purple
+
+```css
+[data-theme-color="purple"] {
+  --primary: oklch(0.62 0.28 295);
+  --primary-foreground: oklch(1 0 0);
+  --accent: oklch(0.62 0.28 295);
+  --accent-foreground: oklch(1 0 0);
+  --ring: oklch(0.62 0.28 295);
+}
+```
+
+To activate a theme at runtime, set `data-theme-color` on your `<html>` element:
+
+```ts
+document.documentElement.setAttribute("data-theme-color", "green")
+// remove the attribute to go back to pink (default)
+document.documentElement.removeAttribute("data-theme-color")
 ```
 
 ## Border Radius
 
-radk uses a single `--radius` variable (`0.375rem` by default — sharper than shadcn's `0.625rem`):
+radk uses `--radius: 0px` globally — sharp corners are core to the neobrutalism aesthetic. You can override this:
 
 ```css
 :root {
-  --radius: 0.5rem; /* make it rounder */
+  --radius: 0.375rem; /* softer corners */
 }
 ```
+
+## Neobrutalism Shadows
+
+The offset box shadow is driven by `--neo-shadow-color`:
+
+```css
+:root {
+  --neo-shadow-color: oklch(0.07 0 0); /* dark shadow in light mode */
+}
+.dark {
+  --neo-shadow-color: oklch(0.95 0.01 90); /* light shadow in dark mode */
+}
+```
+
+Usage in components: `shadow-[4px_4px_0_0_var(--neo-shadow-color)]`

@@ -1,0 +1,48 @@
+---
+title: Collapsible
+description: An interactive component which expands/collapses a panel.
+---
+
+<CollapsibleDemo />
+
+## Installation
+
+```bash
+npx radk add collapsible
+```
+
+## Usage
+
+```tsx
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
+```
+
+```tsx
+<Collapsible>
+  <CollapsibleTrigger>Can I use this in my project?</CollapsibleTrigger>
+  <CollapsibleContent>
+    Yes. Free to use for personal and commercial projects.
+  </CollapsibleContent>
+</Collapsible>
+```
+
+## Examples
+
+### Controlled
+
+```tsx
+const [isOpen, setIsOpen] = React.useState(false)
+
+<Collapsible open={isOpen} onOpenChange={setIsOpen}>
+  <CollapsibleTrigger asChild>
+    <Button variant="ghost">Toggle</Button>
+  </CollapsibleTrigger>
+  <CollapsibleContent>
+    Hidden content shown when open.
+  </CollapsibleContent>
+</Collapsible>
+```

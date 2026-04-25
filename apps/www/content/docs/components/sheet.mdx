@@ -1,0 +1,63 @@
+---
+title: Sheet
+description: A side panel that slides in from any edge of the screen.
+---
+
+<SheetDemo />
+
+## Installation
+
+```bash
+npx radk add sheet
+```
+
+## Usage
+
+```tsx
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+```
+
+```tsx
+<Sheet>
+  <SheetTrigger asChild>
+    <Button variant="outline">Open</Button>
+  </SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>Edit profile</SheetTitle>
+      <SheetDescription>
+        Make changes to your profile here.
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+```
+
+## Examples
+
+### Side
+
+Use the `side` prop to control which edge the sheet slides in from.
+
+```tsx
+<Sheet>
+  <SheetTrigger asChild>
+    <Button variant="outline">Open left</Button>
+  </SheetTrigger>
+  <SheetContent side="left">
+    <SheetHeader>
+      <SheetTitle>Navigation</SheetTitle>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+```
+
+Available sides: `top` | `right` | `bottom` | `left` (default: `right`).

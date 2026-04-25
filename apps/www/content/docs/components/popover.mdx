@@ -1,0 +1,45 @@
+---
+title: Popover
+description: Displays rich content in a portal, triggered by a button.
+---
+
+<PopoverDemo />
+
+## Installation
+
+```bash
+npx radk add popover
+```
+
+## Usage
+
+```tsx
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
+```
+
+```tsx
+<Popover>
+  <PopoverTrigger asChild>
+    <Button variant="outline">Open</Button>
+  </PopoverTrigger>
+  <PopoverContent>
+    Place content for the popover here.
+  </PopoverContent>
+</Popover>
+```
+
+## Examples
+
+### Alignment
+
+Use the `align` prop on `PopoverContent` to control positioning.
+
+```tsx
+<PopoverContent align="start">Left-aligned content</PopoverContent>
+<PopoverContent align="center">Center-aligned content</PopoverContent>
+<PopoverContent align="end">Right-aligned content</PopoverContent>
+```

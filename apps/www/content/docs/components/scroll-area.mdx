@@ -1,0 +1,45 @@
+---
+title: Scroll Area
+description: Augments native scroll functionality for custom, cross-browser styling.
+---
+
+<ScrollAreaDemo />
+
+## Installation
+
+```bash
+npx radk add scroll-area
+```
+
+## Usage
+
+```tsx
+import { ScrollArea } from "@/components/ui/scroll-area"
+```
+
+```tsx
+<ScrollArea className="h-72 w-48">
+  <div className="p-4">
+    {Array.from({ length: 50 }).map((_, i) => (
+      <div key={i} className="text-sm">Item {i + 1}</div>
+    ))}
+  </div>
+</ScrollArea>
+```
+
+## Examples
+
+### Horizontal
+
+```tsx
+import { ScrollBar } from "@/components/ui/scroll-area"
+
+<ScrollArea className="w-96 whitespace-nowrap">
+  <div className="flex gap-4 p-4">
+    {items.map((item) => (
+      <div key={item} className="w-32 shrink-0">{item}</div>
+    ))}
+  </div>
+  <ScrollBar orientation="horizontal" />
+</ScrollArea>
+```

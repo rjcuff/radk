@@ -73,6 +73,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
+      <head>
+        {/* Prevent flash of wrong color theme on load */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('radk-color-theme');if(t&&t!=='pink')document.documentElement.setAttribute('data-theme-color',t);}catch(e){}})()`,
+          }}
+        />
+      </head>
       <body className="min-h-dvh bg-background font-sans antialiased">
         <RootProvider>
           {children}

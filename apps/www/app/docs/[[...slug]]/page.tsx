@@ -25,6 +25,14 @@ import { AccordionDemo } from "@/components/docs/accordion-demo"
 import { AlertDemo } from "@/components/docs/alert-demo"
 import { SpinnerDemo } from "@/components/docs/spinner-demo"
 import { ToggleDemo } from "@/components/docs/toggle-demo"
+import { SheetDemo } from "@/components/docs/sheet-demo"
+import { PopoverDemo } from "@/components/docs/popover-demo"
+import { SliderDemo } from "@/components/docs/slider-demo"
+import { RadioGroupDemo } from "@/components/docs/radio-group-demo"
+import { TableDemo } from "@/components/docs/table-demo"
+import { CollapsibleDemo } from "@/components/docs/collapsible-demo"
+import { BreadcrumbDemo } from "@/components/docs/breadcrumb-demo"
+import { ScrollAreaDemo } from "@/components/docs/scroll-area-demo"
 
 const customComponents = {
   ...defaultMdxComponents,
@@ -50,6 +58,14 @@ const customComponents = {
   AlertDemo,
   SpinnerDemo,
   ToggleDemo,
+  SheetDemo,
+  PopoverDemo,
+  SliderDemo,
+  RadioGroupDemo,
+  TableDemo,
+  CollapsibleDemo,
+  BreadcrumbDemo,
+  ScrollAreaDemo,
 }
 
 export default async function Page({

@@ -1,0 +1,49 @@
+---
+title: Radio Group
+description: A set of checkable buttons where no more than one can be checked at a time.
+---
+
+<RadioGroupDemo />
+
+## Installation
+
+```bash
+npx radk add radio-group
+```
+
+## Usage
+
+```tsx
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+```
+
+```tsx
+<RadioGroup defaultValue="option-1">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-1" id="option-1" />
+    <Label htmlFor="option-1">Option 1</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-2" id="option-2" />
+    <Label htmlFor="option-2">Option 2</Label>
+  </div>
+</RadioGroup>
+```
+
+## Examples
+
+### Disabled
+
+```tsx
+<RadioGroup defaultValue="option-1">
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-1" id="d-option-1" />
+    <Label htmlFor="d-option-1">Option 1</Label>
+  </div>
+  <div className="flex items-center space-x-2">
+    <RadioGroupItem value="option-2" id="d-option-2" disabled />
+    <Label htmlFor="d-option-2" className="opacity-50">Option 2</Label>
+  </div>
+</RadioGroup>
+```

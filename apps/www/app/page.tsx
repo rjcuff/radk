@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { ComponentShowcase } from "@/components/component-showcase"
+import { ThemeColorSwitcher } from "@/components/theme-color-switcher"
 
 export const metadata: Metadata = {
   title: "radk — Build interfaces faster. Own every pixel.",
@@ -41,13 +42,7 @@ export default function HomePage() {
               Components
             </Link>
           </div>
-          <div className="mt-10 flex items-center gap-6 text-xs font-bold uppercase tracking-widest text-muted-foreground">
-            <span className="hidden sm:inline">21 Components</span>
-            <span className="hidden sm:inline text-border">—</span>
-            <span className="hidden sm:inline">TypeScript</span>
-            <span className="hidden sm:inline text-border">—</span>
-            <span>Open Source</span>
-          </div>
+          <ThemeColorSwitcher className="mt-10" />
         </div>
 
         {/* Right — live showcase */}
