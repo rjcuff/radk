@@ -34,24 +34,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://radk.dev",
     siteName: "radk",
-    title: "radk — Build interfaces faster. Own every pixel.",
+    title: "radk — Build beautiful interfaces faster. Own every pixel.",
     description:
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
     images: [
       {
-        url: "/og.png",
+        url: "https://radk.dev/og.png",
         width: 1200,
         height: 630,
-        alt: "radk — Build interfaces faster. Own every pixel.",
+        alt: "radk — Build beautiful interfaces faster. Own every pixel.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "radk — Build interfaces faster. Own every pixel.",
+    title: "radk — Build beautiful interfaces faster. Own every pixel.",
     description:
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in.",
-    images: ["/og.png"],
+    images: ["https://radk.dev/og.png"],
   },
   robots: {
     index: true,
