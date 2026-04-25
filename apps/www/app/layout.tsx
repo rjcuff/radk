@@ -10,7 +10,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://radk.dev"),
+  metadataBase: new URL("https://radk.sh"),
   title: {
     default: "radk — Build interfaces faster. Own every pixel.",
     template: "%s | radk",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://radk.dev",
+    url: "https://radk.sh",
     siteName: "radk",
     title: "radk — Build beautiful interfaces faster. Own every pixel.",
     description:
