@@ -4,7 +4,11 @@
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "mcp__exa__web_search_exa",
-      "mcp__exa__web_fetch_exa"
+      "mcp__exa__web_fetch_exa",
+      "Bash(mkdir -p \"/c/Users/ryanj/Desktop/npm-checker\")",
+      "Read(//c/Users/ryanj/Desktop/**)",
+      "Bash(npm init *)",
+      "Bash(npm install *)"
     ]
   }
 }

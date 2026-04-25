@@ -14,7 +14,7 @@ export const diff = new Command("diff")
     const configPath = path.join(cwd, "components.json")
 
     if (!existsSync(configPath)) {
-      console.error(chalk.red("components.json not found. Run `mono-ui init` first."))
+      console.error(chalk.red("components.json not found. Run `krux init` first."))
       process.exit(1)
     }
 
@@ -37,7 +37,7 @@ export const diff = new Command("diff")
         console.log(chalk.green(`  ${component}: up to date`))
       } else {
         console.log(chalk.red(`  ${component}: differs from registry`))
-        console.log(chalk.dim("  Run `mono-ui add --yes ${component}` to update"))
+        console.log(chalk.dim("  Run `krux add --yes ${component}` to update"))
       }
     }
   })

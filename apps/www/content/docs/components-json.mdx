@@ -7,12 +7,12 @@ The `components.json` file holds configuration for your project. It tells the CL
 
 ## Creating components.json
 
-Run `npx mono-ui init` to create the file automatically, or create it manually:
+Run `npx krux init` to create the file automatically, or create it manually:
 
 ```json title="components.json"
 {
-  "$schema": "https://mono-ui.dev/schema.json",
-  "style": "mono-ui",
+  "$schema": "https://krux.dev/schema.json",
+  "style": "krux",
   "rsc": true,
   "tsx": true,
   "tailwind": {
@@ -27,7 +27,7 @@ Run `npx mono-ui init` to create the file automatically, or create it manually:
     "lib": "@/lib",
     "hooks": "@/hooks"
   },
-  "registryUrl": "https://mono-ui.dev/r"
+  "registryUrl": "https://krux.dev/r"
 }
 ```
 
@@ -35,11 +35,11 @@ Run `npx mono-ui init` to create the file automatically, or create it manually:
 
 ### style
 
-The component style to use. Currently only `"mono-ui"` is supported.
+The component style to use. Currently only `"krux"` is supported.
 
 ```json
 {
-  "style": "mono-ui"
+  "style": "krux"
 }
 ```
 
@@ -105,10 +105,10 @@ Path aliases for your project. Must match your `tsconfig.json` `paths`.
 
 ### registryUrl
 
-The registry URL to fetch components from. Defaults to `https://mono-ui.dev/r`.
+The registry URL to fetch components from. Defaults to `https://krux.dev/r`.
 
 ```json
 {
-  "registryUrl": "https://mono-ui.dev/r"
+  "registryUrl": "https://krux.dev/r"
 }
 ```

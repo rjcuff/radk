@@ -4,7 +4,7 @@ import { Navbar } from "@/components/navbar"
 import { ComponentShowcase } from "@/components/component-showcase"
 
 export const metadata: Metadata = {
-  title: "mono-ui — Build interfaces faster. Own every pixel.",
+  title: "krux — Build interfaces faster. Own every pixel.",
   description:
     "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
 }
@@ -64,7 +64,7 @@ export default function HomePage() {
             </a>
             . The source code is available on{" "}
             <a
-              href="https://github.com/rjcuff/mono-ui"
+              href="https://github.com/rjcuff/krux"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4 hover:text-foreground"

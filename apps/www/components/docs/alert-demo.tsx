@@ -1,6 +1,6 @@
 "use client"
 
-import { Alert, AlertTitle, AlertDescription } from "@/registry/mono-ui/ui/alert"
+import { Alert, AlertTitle, AlertDescription } from "@/registry/krux/ui/alert"
 import { Terminal, AlertCircle, CheckCircle, AlertTriangle } from "lucide-react"
 
 export function AlertDemo() {

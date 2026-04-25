@@ -1,5 +1,5 @@
 {
-  "name": "mono-ui",
+  "name": "krux",
   "private": true,
   "packageManager": "pnpm@9.0.6",
   "scripts": {

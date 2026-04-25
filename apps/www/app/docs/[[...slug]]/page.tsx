@@ -91,14 +91,14 @@ export async function generateMetadata({
     title: page.data.title,
     description: page.data.description,
     openGraph: {
-      title: `${page.data.title} — mono-ui`,
+      title: `${page.data.title} — krux`,
       description: page.data.description,
       type: "article",
       url: `/docs/${(slug ?? []).join("/")}`,
     },
     twitter: {
       card: "summary_large_image",
-      title: `${page.data.title} — mono-ui`,
+      title: `${page.data.title} — krux`,
       description: page.data.description,
     },
   }

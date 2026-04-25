@@ -2,7 +2,7 @@
 @import "fumadocs-ui/css/shadcn.css";
 @import "fumadocs-ui/css/preset.css";
 
-/* mono-ui: slate-blue theme */
+/* krux: slate-blue theme */
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.13 0.015 255);

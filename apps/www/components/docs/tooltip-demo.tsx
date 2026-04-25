@@ -1,12 +1,12 @@
 "use client"
 
-import { Button } from "@/registry/mono-ui/ui/button"
+import { Button } from "@/registry/krux/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/mono-ui/ui/tooltip"
+} from "@/registry/krux/ui/tooltip"
 
 export function TooltipDemo() {
   return (

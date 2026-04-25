@@ -1,7 +1,7 @@
 "use client"
 
-import { Textarea } from "@/registry/mono-ui/ui/textarea"
-import { Label } from "@/registry/mono-ui/ui/label"
+import { Textarea } from "@/registry/krux/ui/textarea"
+import { Label } from "@/registry/krux/ui/label"
 
 export function TextareaDemo() {
   return (

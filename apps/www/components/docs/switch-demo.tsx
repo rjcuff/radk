@@ -1,7 +1,7 @@
 "use client"
 
-import { Switch } from "@/registry/mono-ui/ui/switch"
-import { Label } from "@/registry/mono-ui/ui/label"
+import { Switch } from "@/registry/krux/ui/switch"
+import { Label } from "@/registry/krux/ui/label"
 
 export function SwitchDemo() {
   return (

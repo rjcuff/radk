@@ -51,7 +51,7 @@ export type Registry = z.infer<typeof registrySchema>
 
 export const componentsJsonSchema = z.object({
   $schema: z.string().optional(),
-  style: z.string().default("mono-ui"),
+  style: z.string().default("krux"),
   rsc: z.boolean().default(true),
   tsx: z.boolean().default(true),
   tailwind: z.object({
@@ -67,7 +67,7 @@ export const componentsJsonSchema = z.object({
     lib: z.string().optional(),
     hooks: z.string().optional(),
   }),
-  registryUrl: z.string().default("https://mono-ui.dev/r"),
+  registryUrl: z.string().default("https://krux.dev/r"),
 })
 
 export type ComponentsJson = z.infer<typeof componentsJsonSchema>

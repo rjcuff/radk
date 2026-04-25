@@ -1,16 +1,16 @@
 ---
 title: Registry
-description: How the mono-ui component registry works.
+description: How the krux component registry works.
 ---
 
-The mono-ui registry is a JSON-based system for distributing component source code. It's how `npx mono-ui add button` knows what to download and install.
+The krux registry is a JSON-based system for distributing component source code. It's how `npx krux add button` knows what to download and install.
 
 ## How It Works
 
 ```
 registry.json          ← manifest of all components
   ↓
-public/r/mono-ui/
+public/r/krux/
   ├── button.json      ← component source + metadata
   ├── card.json
   └── ...
@@ -20,14 +20,14 @@ Each component JSON contains:
 
 - **source code** — the actual `.tsx` file content
 - **npm dependencies** — packages to install
-- **registry dependencies** — other mono-ui components required
+- **registry dependencies** — other krux components required
 - **CSS variables** — any theme variables the component needs
 
 ## Component JSON Structure
 
 ```json
 {
-  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "$schema": "https://krux.dev/schema/registry-item.json",
   "name": "button",
   "type": "registry:ui",
   "title": "Button",
@@ -39,7 +39,7 @@ Each component JSON contains:
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/mono-ui/ui/button.tsx",
+      "path": "registry/krux/ui/button.tsx",
       "type": "registry:component",
       "content": "// full source code..."
     }

@@ -1,16 +1,16 @@
 ---
 title: CLI
-description: Use the mono-ui CLI to add components to your project.
+description: Use the krux CLI to add components to your project.
 ---
 
-The `mono-ui` CLI lets you initialize your project and add components from the registry.
+The `krux` CLI lets you initialize your project and add components from the registry.
 
 ## init
 
-Initialize mono-ui in a new project:
+Initialize krux in a new project:
 
 ```bash
-npx mono-ui init
+npx krux init
 ```
 
 You will be asked a few questions:
@@ -35,13 +35,13 @@ This creates a `components.json` file and installs the base dependencies.
 Add a component to your project:
 
 ```bash
-npx mono-ui add button
+npx krux add button
 ```
 
 You can add multiple components at once:
 
 ```bash
-npx mono-ui add button card dialog select
+npx krux add button card dialog select
 ```
 
 The CLI will:
@@ -64,7 +64,7 @@ The CLI will:
 Preview what a component add would do:
 
 ```bash
-npx mono-ui add button --dry-run
+npx krux add button --dry-run
 ```
 
 ## diff
@@ -72,7 +72,7 @@ npx mono-ui add button --dry-run
 Check if a locally installed component is up to date with the registry:
 
 ```bash
-npx mono-ui diff button
+npx krux diff button
 ```
 
 Output:
@@ -80,5 +80,5 @@ Output:
 ```
   button: up to date
   card: differs from registry
-  Run `mono-ui add --yes card` to update
+  Run `krux add --yes card` to update
 ```

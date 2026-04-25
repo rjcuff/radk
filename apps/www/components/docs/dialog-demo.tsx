@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/mono-ui/ui/button"
+import { Button } from "@/registry/krux/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -9,9 +9,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/mono-ui/ui/dialog"
-import { Input } from "@/registry/mono-ui/ui/input"
-import { Label } from "@/registry/mono-ui/ui/label"
+} from "@/registry/krux/ui/dialog"
+import { Input } from "@/registry/krux/ui/input"
+import { Label } from "@/registry/krux/ui/label"
 
 export function DialogDemo() {
   return (

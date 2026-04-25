@@ -6,7 +6,7 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/mono-ui/ui/select"
+} from "@/registry/krux/ui/select"
 
 export function SelectDemo() {
   return (

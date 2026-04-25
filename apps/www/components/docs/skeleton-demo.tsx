@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/mono-ui/ui/skeleton"
+import { Skeleton } from "@/registry/krux/ui/skeleton"
 
 export function SkeletonDemo() {
   return (

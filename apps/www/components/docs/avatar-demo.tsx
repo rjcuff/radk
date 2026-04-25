@@ -1,6 +1,6 @@
 "use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/mono-ui/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/krux/ui/avatar"
 
 export function AvatarDemo() {
   return (

@@ -1,14 +1,15 @@
 import { DocsLayout } from "fumadocs-ui/layouts/docs"
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
+import Image from "next/image"
 import { source } from "@/lib/source"
 
 export const metadata: Metadata = {
   title: {
     default: "Docs",
-    template: "%s | mono-ui",
+    template: "%s | krux",
   },
-  description: "Documentation for mono-ui components.",
+  description: "Documentation for krux components.",
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -17,7 +18,10 @@ export default function Layout({ children }: { children: ReactNode }) {
       tree={source.pageTree}
       nav={{
         title: (
-          <span className="text-sm font-semibold text-foreground">mono-ui</span>
+          <span className="flex items-center gap-2">
+            <Image src="/logo.png" alt="krux" width={20} height={20} className="rounded-sm" />
+            <span className="text-sm font-semibold text-foreground">krux</span>
+          </span>
         ),
         transparentMode: "top",
       }}

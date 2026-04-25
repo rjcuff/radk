@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: How to install and configure mono-ui in your project.
+description: How to install and configure krux in your project.
 ---
 
 ## Prerequisites
@@ -16,7 +16,7 @@ Before you begin, make sure you have:
 Run the `init` command to set up your project:
 
 ```bash
-npx mono-ui init
+npx krux init
 ```
 
 This will:
@@ -30,13 +30,13 @@ This will:
 Use the `add` command to install components:
 
 ```bash
-npx mono-ui add button
+npx krux add button
 ```
 
 You can add multiple components at once:
 
 ```bash
-npx mono-ui add button card input dialog
+npx krux add button card input dialog
 ```
 
 Each component is copied as source code into your `src/components/ui/` directory.
@@ -57,8 +57,8 @@ The `init` command creates a `components.json` file in your project root. This c
 
 ```json
 {
-  "$schema": "https://mono-ui.dev/schema.json",
-  "style": "mono-ui",
+  "$schema": "https://krux.dev/schema.json",
+  "style": "krux",
   "rsc": true,
   "tsx": true,
   "tailwind": {

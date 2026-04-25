@@ -1,20 +1,20 @@
 "use client"
 
 import { Users } from "lucide-react"
-import { Button } from "@/registry/mono-ui/ui/button"
+import { Button } from "@/registry/krux/ui/button"
 import {
   Card,
   CardHeader,
   CardTitle,
   CardDescription,
   CardContent,
-} from "@/registry/mono-ui/ui/card"
+} from "@/registry/krux/ui/card"
 import {
   Avatar,
   AvatarFallback,
-} from "@/registry/mono-ui/ui/avatar"
-import { Separator } from "@/registry/mono-ui/ui/separator"
-import { Badge } from "@/registry/mono-ui/ui/badge"
+} from "@/registry/krux/ui/avatar"
+import { Separator } from "@/registry/krux/ui/separator"
+import { Badge } from "@/registry/krux/ui/badge"
 
 const members = [
   { name: "Alice Martin", email: "alice@example.com", initials: "AM" },

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Progress } from "@/registry/mono-ui/ui/progress"
+import { Progress } from "@/registry/krux/ui/progress"
 
 export function ProgressDemo() {
   const [progress, setProgress] = React.useState(30)

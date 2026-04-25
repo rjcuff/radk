@@ -1,9 +1,9 @@
 "use client"
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/mono-ui/ui/tabs"
-import { Button } from "@/registry/mono-ui/ui/button"
-import { Input } from "@/registry/mono-ui/ui/input"
-import { Label } from "@/registry/mono-ui/ui/label"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/krux/ui/tabs"
+import { Button } from "@/registry/krux/ui/button"
+import { Input } from "@/registry/krux/ui/input"
+import { Label } from "@/registry/krux/ui/label"
 import {
   Card,
   CardHeader,
@@ -11,7 +11,7 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/registry/mono-ui/ui/card"
+} from "@/registry/krux/ui/card"
 
 export function TabsDemo() {
   return (

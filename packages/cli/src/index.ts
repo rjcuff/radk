@@ -7,8 +7,8 @@ import { init } from "./commands/init.js"
 const program = new Command()
 
 program
-  .name("mono-ui")
-  .description("Add mono-ui components to your project")
+  .name("krux")
+  .description("Add krux components to your project")
   .version("0.1.0")
 
 program.addCommand(init)

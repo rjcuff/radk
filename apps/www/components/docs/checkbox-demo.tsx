@@ -1,7 +1,7 @@
 "use client"
 
-import { Checkbox } from "@/registry/mono-ui/ui/checkbox"
-import { Label } from "@/registry/mono-ui/ui/label"
+import { Checkbox } from "@/registry/krux/ui/checkbox"
+import { Label } from "@/registry/krux/ui/label"
 
 export function CheckboxDemo() {
   return (

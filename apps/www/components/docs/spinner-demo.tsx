@@ -1,6 +1,6 @@
 "use client"
 
-import { Spinner } from "@/registry/mono-ui/ui/spinner"
+import { Spinner } from "@/registry/krux/ui/spinner"
 
 export function SpinnerDemo() {
   return (

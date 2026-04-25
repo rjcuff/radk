@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/mono-ui/ui/button"
+import { Button } from "@/registry/krux/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/mono-ui/ui/dropdown-menu"
+} from "@/registry/krux/ui/dropdown-menu"
 
 export function DropdownMenuDemo() {
   return (

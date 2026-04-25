@@ -1,18 +1,18 @@
 {
-  "name": "mono-ui",
+  "name": "radk-cli",
   "version": "0.1.0",
-  "description": "Add beautiful mono-ui components to your app",
+  "description": "Add beautiful radk components to your app",
   "keywords": ["ui", "components", "tailwind", "react"],
   "license": "MIT",
   "bin": {
-    "mono-ui": "./dist/index.js"
+    "radk": "./dist/index.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "scripts": {

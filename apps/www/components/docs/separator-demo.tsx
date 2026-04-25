@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/mono-ui/ui/separator"
+import { Separator } from "@/registry/krux/ui/separator"
 
 export function SeparatorDemo() {
   return (

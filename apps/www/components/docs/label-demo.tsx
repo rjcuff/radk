@@ -1,7 +1,7 @@
 "use client"
 
-import { Label } from "@/registry/mono-ui/ui/label"
-import { Input } from "@/registry/mono-ui/ui/input"
+import { Label } from "@/registry/krux/ui/label"
+import { Input } from "@/registry/krux/ui/input"
 
 export function LabelDemo() {
   return (

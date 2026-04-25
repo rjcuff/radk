@@ -1,7 +1,7 @@
 {
-  "$schema": "https://mono-ui.dev/schema/registry.json",
-  "name": "mono-ui",
-  "homepage": "https://mono-ui.dev",
+  "$schema": "https://krux.dev/schema/registry.json",
+  "name": "krux",
+  "homepage": "https://krux.dev",
   "items": [
     {
       "name": "button",

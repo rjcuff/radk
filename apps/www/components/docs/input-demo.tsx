@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Input } from "@/registry/mono-ui/ui/input"
-import { Label } from "@/registry/mono-ui/ui/label"
-import { Button } from "@/registry/mono-ui/ui/button"
+import { Input } from "@/registry/krux/ui/input"
+import { Label } from "@/registry/krux/ui/label"
+import { Button } from "@/registry/krux/ui/button"
 
 export function InputDemo() {
   const [disabled, setDisabled] = React.useState(false)
