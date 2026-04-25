@@ -1,6 +1,6 @@
 {
   "name": "radk-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Add beautiful radk components to your app",
   "keywords": ["ui", "components", "tailwind", "react"],
   "license": "MIT",
