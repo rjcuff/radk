@@ -37,12 +37,21 @@ export const metadata: Metadata = {
     title: "radk — Build interfaces faster. Own every pixel.",
     description:
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: "radk — Build interfaces faster. Own every pixel.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "radk — Build interfaces faster. Own every pixel.",
     description:
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in.",
+    images: ["/og.png"],
   },
   robots: {
     index: true,
