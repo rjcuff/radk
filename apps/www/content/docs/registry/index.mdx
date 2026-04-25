@@ -1,16 +1,16 @@
 ---
 title: Registry
-description: How the krux component registry works.
+description: How the radk component registry works.
 ---
 
-The krux registry is a JSON-based system for distributing component source code. It's how `npx krux add button` knows what to download and install.
+The radk registry is a JSON-based system for distributing component source code. It's how `npx radk add button` knows what to download and install.
 
 ## How It Works
 
 ```
 registry.json          ← manifest of all components
   ↓
-public/r/krux/
+public/r/radk/
   ├── button.json      ← component source + metadata
   ├── card.json
   └── ...
@@ -20,14 +20,14 @@ Each component JSON contains:
 
 - **source code** — the actual `.tsx` file content
 - **npm dependencies** — packages to install
-- **registry dependencies** — other krux components required
+- **registry dependencies** — other radk components required
 - **CSS variables** — any theme variables the component needs
 
 ## Component JSON Structure
 
 ```json
 {
-  "$schema": "https://krux.dev/schema/registry-item.json",
+  "$schema": "https://radk.dev/schema/registry-item.json",
   "name": "button",
   "type": "registry:ui",
   "title": "Button",
@@ -39,7 +39,7 @@ Each component JSON contains:
   "registryDependencies": [],
   "files": [
     {
-      "path": "registry/krux/ui/button.tsx",
+      "path": "registry/radk/ui/button.tsx",
       "type": "registry:component",
       "content": "// full source code..."
     }

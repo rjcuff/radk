@@ -1,4 +1,4 @@
-import { Skeleton } from "@/registry/krux/ui/skeleton"
+import { Skeleton } from "@/registry/radk/ui/skeleton"
 
 export function SkeletonDemo() {
   return (

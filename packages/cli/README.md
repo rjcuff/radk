@@ -1,6 +1,6 @@
 # radk-cli
 
-CLI for adding [krux](https://krux.dev) components to your React project.
+CLI for adding [radk](https://radk.dev) components to your React project.
 
 ## Usage
 
@@ -13,7 +13,7 @@ npx radk-cli add [component]
 
 ### `init`
 
-Set up krux in an existing project. Creates `components.json` and installs base dependencies (`clsx`, `tailwind-merge`, `class-variance-authority`).
+Set up radk in an existing project. Creates `components.json` and installs base dependencies (`clsx`, `tailwind-merge`, `class-variance-authority`).
 
 ```bash
 npx radk-cli init

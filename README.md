@@ -1,10 +1,10 @@
-# krux
+# radk
 
 Beautiful, accessible React components you copy into your project. Built on Radix UI and Tailwind CSS. No dependencies. Full control.
 
-## What is krux?
+## What is radk?
 
-krux is a component library where you own the source code. Instead of installing a package, you use the CLI to copy component files directly into your project — the same approach as shadcn/ui, but with krux's design system: slate-blue palette, sharp radius, and clean typography.
+radk is a component library where you own the source code. Instead of installing a package, you use the CLI to copy component files directly into your project — the same approach as shadcn/ui, but with radk's design system: slate-blue palette, sharp radius, and clean typography.
 
 ## Packages
 

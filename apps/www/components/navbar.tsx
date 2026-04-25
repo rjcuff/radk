@@ -10,8 +10,8 @@ export function Navbar() {
       <div className="mx-auto flex h-14 max-w-screen-2xl items-center px-4 sm:px-6">
         <MobileNav />
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="/logo.png" alt="krux" width={24} height={24} className="rounded-sm" />
-          <span className="text-sm font-bold">krux</span>
+          <Image src="/logo.png" alt="radk" width={24} height={24} className="rounded-sm" />
+          <span className="text-sm font-bold">radk</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <Link
@@ -29,7 +29,7 @@ export function Navbar() {
         </nav>
         <div className="ml-auto flex items-center gap-1">
           <a
-            href="https://github.com/rjcuff/krux"
+            href="https://github.com/rjcuff/radk"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:text-foreground"

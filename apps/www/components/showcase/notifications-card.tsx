@@ -1,7 +1,7 @@
 "use client"
 
 import { Bell, Check, MessageSquare, UserPlus } from "lucide-react"
-import { Button } from "@/registry/krux/ui/button"
+import { Button } from "@/registry/radk/ui/button"
 import {
   Card,
   CardHeader,
@@ -9,10 +9,10 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/registry/krux/ui/card"
-import { Badge } from "@/registry/krux/ui/badge"
-import { Separator } from "@/registry/krux/ui/separator"
-import { Skeleton } from "@/registry/krux/ui/skeleton"
+} from "@/registry/radk/ui/card"
+import { Badge } from "@/registry/radk/ui/badge"
+import { Separator } from "@/registry/radk/ui/separator"
+import { Skeleton } from "@/registry/radk/ui/skeleton"
 
 const notifications = [
   {

@@ -19,7 +19,7 @@ export const add = new Command("add")
     const configPath = path.join(cwd, "components.json")
 
     if (!existsSync(configPath)) {
-      console.error(chalk.red("components.json not found. Run `krux init` first."))
+      console.error(chalk.red("components.json not found. Run `radk init` first."))
       process.exit(1)
     }
 
@@ -27,7 +27,7 @@ export const add = new Command("add")
     const config = componentsJsonSchema.parse(raw)
 
     if (!components.length) {
-      console.error(chalk.red("Specify at least one component: krux add button"))
+      console.error(chalk.red("Specify at least one component: radk add button"))
       process.exit(1)
     }
 

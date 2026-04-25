@@ -1,7 +1,7 @@
 "use client"
 
-import { Label } from "@/registry/krux/ui/label"
-import { Input } from "@/registry/krux/ui/input"
+import { Label } from "@/registry/radk/ui/label"
+import { Input } from "@/registry/radk/ui/input"
 
 export function LabelDemo() {
   return (

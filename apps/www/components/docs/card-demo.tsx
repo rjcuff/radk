@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/registry/krux/ui/button"
+import { Button } from "@/registry/radk/ui/button"
 import {
   Card,
   CardHeader,
@@ -9,9 +9,9 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/registry/krux/ui/card"
-import { Input } from "@/registry/krux/ui/input"
-import { Label } from "@/registry/krux/ui/label"
+} from "@/registry/radk/ui/card"
+import { Input } from "@/registry/radk/ui/input"
+import { Label } from "@/registry/radk/ui/label"
 
 export function CardDemo() {
   return (

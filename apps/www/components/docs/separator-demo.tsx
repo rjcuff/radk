@@ -1,4 +1,4 @@
-import { Separator } from "@/registry/krux/ui/separator"
+import { Separator } from "@/registry/radk/ui/separator"
 
 export function SeparatorDemo() {
   return (

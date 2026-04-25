@@ -1,12 +1,12 @@
 import { registryItemSchema, type RegistryItem } from "./schema.js"
 
-export const REGISTRY_URL = "https://krux.dev/r"
+export const REGISTRY_URL = "https://radk.dev/r"
 
 export async function fetchRegistryItem(
   name: string,
   registryUrl = REGISTRY_URL
 ): Promise<RegistryItem> {
-  const url = `${registryUrl}/krux/${name}.json`
+  const url = `${registryUrl}/radk/${name}.json`
   const res = await fetch(url)
 
   if (!res.ok) {

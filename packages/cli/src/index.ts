@@ -7,8 +7,8 @@ import { init } from "./commands/init.js"
 const program = new Command()
 
 program
-  .name("krux")
-  .description("Add krux components to your project")
+  .name("radk")
+  .description("Add radk components to your project")
   .version("0.1.0")
 
 program.addCommand(init)

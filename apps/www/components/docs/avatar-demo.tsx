@@ -1,6 +1,6 @@
 "use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/registry/krux/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/registry/radk/ui/avatar"
 
 export function AvatarDemo() {
   return (

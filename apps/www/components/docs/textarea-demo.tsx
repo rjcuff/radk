@@ -1,7 +1,7 @@
 "use client"
 
-import { Textarea } from "@/registry/krux/ui/textarea"
-import { Label } from "@/registry/krux/ui/label"
+import { Textarea } from "@/registry/radk/ui/textarea"
+import { Label } from "@/registry/radk/ui/label"
 
 export function TextareaDemo() {
   return (

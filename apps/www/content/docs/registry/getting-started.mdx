@@ -1,6 +1,6 @@
 ---
 title: Registry Getting Started
-description: Use the krux registry to distribute your own components.
+description: Use the radk registry to distribute your own components.
 ---
 
 You can host your own registry and share components across projects — or with the community.
@@ -11,7 +11,7 @@ Create a `registry.json` at the root of your project:
 
 ```json title="registry.json"
 {
-  "$schema": "https://krux.dev/schema/registry.json",
+  "$schema": "https://radk.dev/schema/registry.json",
   "name": "my-org",
   "homepage": "https://my-org.dev",
   "items": [
@@ -55,19 +55,19 @@ In any project's `components.json`, point to your registry:
 Then add components from it:
 
 ```bash
-npx krux add my-button
+npx radk add my-button
 ```
 
 ## Using Multiple Registries
 
 ```json title="components.json"
 {
-  "registryUrl": "https://krux.dev/r"
+  "registryUrl": "https://radk.dev/r"
 }
 ```
 
 You can also fetch components directly by URL:
 
 ```bash
-npx krux add https://your-domain.dev/r/krux/my-button.json
+npx radk add https://your-domain.dev/r/radk/my-button.json
 ```

@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: How to install and configure krux in your project.
+description: How to install and configure radk in your project.
 ---
 
 ## Prerequisites
@@ -16,7 +16,7 @@ Before you begin, make sure you have:
 Run the `init` command to set up your project:
 
 ```bash
-npx krux init
+npx radk init
 ```
 
 This will:
@@ -30,13 +30,13 @@ This will:
 Use the `add` command to install components:
 
 ```bash
-npx krux add button
+npx radk add button
 ```
 
 You can add multiple components at once:
 
 ```bash
-npx krux add button card input dialog
+npx radk add button card input dialog
 ```
 
 Each component is copied as source code into your `src/components/ui/` directory.
@@ -57,8 +57,8 @@ The `init` command creates a `components.json` file in your project root. This c
 
 ```json
 {
-  "$schema": "https://krux.dev/schema.json",
-  "style": "krux",
+  "$schema": "https://radk.dev/schema.json",
+  "style": "radk",
   "rsc": true,
   "tsx": true,
   "tailwind": {

@@ -1,12 +1,12 @@
 "use client"
 
-import { Button } from "@/registry/krux/ui/button"
+import { Button } from "@/registry/radk/ui/button"
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/registry/krux/ui/tooltip"
+} from "@/registry/radk/ui/tooltip"
 
 export function TooltipDemo() {
   return (

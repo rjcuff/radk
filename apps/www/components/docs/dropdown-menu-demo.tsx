@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/krux/ui/button"
+import { Button } from "@/registry/radk/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +8,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/registry/krux/ui/dropdown-menu"
+} from "@/registry/radk/ui/dropdown-menu"
 
 export function DropdownMenuDemo() {
   return (

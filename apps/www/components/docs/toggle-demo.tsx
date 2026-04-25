@@ -1,6 +1,6 @@
 "use client"
 
-import { Toggle } from "@/registry/krux/ui/toggle"
+import { Toggle } from "@/registry/radk/ui/toggle"
 import { Bold, Italic, Underline } from "lucide-react"
 
 export function ToggleDemo() {

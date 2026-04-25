@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/registry/krux/ui/button"
+import { Button } from "@/registry/radk/ui/button"
 import {
   Dialog,
   DialogContent,
@@ -9,9 +9,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/registry/krux/ui/dialog"
-import { Input } from "@/registry/krux/ui/input"
-import { Label } from "@/registry/krux/ui/label"
+} from "@/registry/radk/ui/dialog"
+import { Input } from "@/registry/radk/ui/input"
+import { Label } from "@/registry/radk/ui/label"
 
 export function DialogDemo() {
   return (

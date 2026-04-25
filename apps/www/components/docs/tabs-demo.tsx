@@ -1,9 +1,9 @@
 "use client"
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/krux/ui/tabs"
-import { Button } from "@/registry/krux/ui/button"
-import { Input } from "@/registry/krux/ui/input"
-import { Label } from "@/registry/krux/ui/label"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/registry/radk/ui/tabs"
+import { Button } from "@/registry/radk/ui/button"
+import { Input } from "@/registry/radk/ui/input"
+import { Label } from "@/registry/radk/ui/label"
 import {
   Card,
   CardHeader,
@@ -11,7 +11,7 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/registry/krux/ui/card"
+} from "@/registry/radk/ui/card"
 
 export function TabsDemo() {
   return (

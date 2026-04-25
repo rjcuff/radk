@@ -10,10 +10,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://krux.dev"),
+  metadataBase: new URL("https://radk.dev"),
   title: {
-    default: "krux — Build interfaces faster. Own every pixel.",
-    template: "%s | krux",
+    default: "radk — Build interfaces faster. Own every pixel.",
+    template: "%s | radk",
   },
   description:
     "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
@@ -25,22 +25,22 @@ export const metadata: Metadata = {
     "design system",
     "open source",
     "component library",
-    "krux",
+    "radk",
   ],
   authors: [{ name: "rjcuff", url: "https://github.com/rjcuff" }],
   creator: "rjcuff",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://krux.dev",
-    siteName: "krux",
-    title: "krux — Build interfaces faster. Own every pixel.",
+    url: "https://radk.dev",
+    siteName: "radk",
+    title: "radk — Build interfaces faster. Own every pixel.",
     description:
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "krux — Build interfaces faster. Own every pixel.",
+    title: "radk — Build interfaces faster. Own every pixel.",
     description:
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in.",
   },

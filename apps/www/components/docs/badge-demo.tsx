@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { Badge } from "@/registry/krux/ui/badge"
-import { Label } from "@/registry/krux/ui/label"
+import { Badge } from "@/registry/radk/ui/badge"
+import { Label } from "@/registry/radk/ui/label"
 
 const variants = ["default", "secondary", "destructive", "outline"] as const
 

@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import { Input } from "@/registry/krux/ui/input"
-import { Label } from "@/registry/krux/ui/label"
-import { Button } from "@/registry/krux/ui/button"
+import { Input } from "@/registry/radk/ui/input"
+import { Label } from "@/registry/radk/ui/label"
+import { Button } from "@/registry/radk/ui/button"
 
 export function InputDemo() {
   const [disabled, setDisabled] = React.useState(false)

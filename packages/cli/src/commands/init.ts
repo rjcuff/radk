@@ -8,7 +8,7 @@ import { execa } from "execa"
 import { getPackageManager } from "../utils/get-package-manager.js"
 
 export const init = new Command("init")
-  .description("Initialize krux in your project")
+  .description("Initialize radk in your project")
   .option("-y, --yes", "Skip prompts and use defaults")
   .option("-c, --cwd <cwd>", "Working directory", process.cwd())
   .action(async (opts) => {
@@ -19,7 +19,7 @@ export const init = new Command("init")
       process.exit(1)
     }
 
-    console.log(chalk.bold("\nInitializing krux...\n"))
+    console.log(chalk.bold("\nInitializing radk...\n"))
 
     let answers: { tailwindCss: string; components: string; utils: string } = {
       tailwindCss: "app/globals.css",
@@ -52,8 +52,8 @@ export const init = new Command("init")
     }
 
     const componentsJson = {
-      $schema: "https://krux.dev/schema.json",
-      style: "krux",
+      $schema: "https://radk.dev/schema.json",
+      style: "radk",
       rsc: true,
       tsx: true,
       tailwind: {
@@ -68,7 +68,7 @@ export const init = new Command("init")
         lib: "@/lib",
         hooks: "@/hooks",
       },
-      registryUrl: "https://krux.dev/r",
+      registryUrl: "https://radk.dev/r",
     }
 
     const spinner = ora("Writing components.json").start()
@@ -90,5 +90,5 @@ export const init = new Command("init")
       console.log(chalk.dim("  clsx tailwind-merge class-variance-authority"))
     }
 
-    console.log(chalk.green("\nDone! Run `krux add button` to add your first component.\n"))
+    console.log(chalk.green("\nDone! Run `radk add button` to add your first component.\n"))
   })

@@ -7,9 +7,9 @@ import { source } from "@/lib/source"
 export const metadata: Metadata = {
   title: {
     default: "Docs",
-    template: "%s | krux",
+    template: "%s | radk",
   },
-  description: "Documentation for krux components.",
+  description: "Documentation for radk components.",
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -19,8 +19,8 @@ export default function Layout({ children }: { children: ReactNode }) {
       nav={{
         title: (
           <span className="flex items-center gap-2">
-            <Image src="/logo.png" alt="krux" width={20} height={20} className="rounded-sm" />
-            <span className="text-sm font-semibold text-foreground">krux</span>
+            <Image src="/logo.png" alt="radk" width={20} height={20} className="rounded-sm" />
+            <span className="text-sm font-semibold text-foreground">radk</span>
           </span>
         ),
         transparentMode: "top",

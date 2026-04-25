@@ -1,8 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/registry/krux/ui/button"
-import { Label } from "@/registry/krux/ui/label"
+import { Button } from "@/registry/radk/ui/button"
+import { Label } from "@/registry/radk/ui/label"
 import { Loader2, Mail, Plus } from "lucide-react"
 
 const variants = ["default", "destructive", "outline", "secondary", "ghost", "link"] as const

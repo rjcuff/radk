@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/registry/krux/ui/accordion"
+} from "@/registry/radk/ui/accordion"
 
 export function AccordionDemo() {
   return (
@@ -20,7 +20,7 @@ export function AccordionDemo() {
         <AccordionItem value="item-2">
           <AccordionTrigger>Is it styled?</AccordionTrigger>
           <AccordionContent>
-            Yes. It comes with default styles that match the rest of the krux design system.
+            Yes. It comes with default styles that match the rest of the radk design system.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">

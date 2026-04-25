@@ -1,7 +1,7 @@
 "use client"
 
-import { Checkbox } from "@/registry/krux/ui/checkbox"
-import { Label } from "@/registry/krux/ui/label"
+import { Checkbox } from "@/registry/radk/ui/checkbox"
+import { Label } from "@/registry/radk/ui/label"
 
 export function CheckboxDemo() {
   return (

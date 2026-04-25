@@ -1,7 +1,7 @@
 "use client"
 
 import { CreditCard, Apple } from "lucide-react"
-import { Button } from "@/registry/krux/ui/button"
+import { Button } from "@/registry/radk/ui/button"
 import {
   Card,
   CardHeader,
@@ -9,16 +9,16 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/registry/krux/ui/card"
-import { Input } from "@/registry/krux/ui/input"
-import { Label } from "@/registry/krux/ui/label"
+} from "@/registry/radk/ui/card"
+import { Input } from "@/registry/radk/ui/input"
+import { Label } from "@/registry/radk/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/registry/krux/ui/select"
+} from "@/registry/radk/ui/select"
 
 export function PaymentMethodCard() {
   return (

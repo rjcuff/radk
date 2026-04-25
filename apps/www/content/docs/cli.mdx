@@ -1,16 +1,16 @@
 ---
 title: CLI
-description: Use the krux CLI to add components to your project.
+description: Use the radk CLI to add components to your project.
 ---
 
-The `krux` CLI lets you initialize your project and add components from the registry.
+The `radk` CLI lets you initialize your project and add components from the registry.
 
 ## init
 
-Initialize krux in a new project:
+Initialize radk in a new project:
 
 ```bash
-npx krux init
+npx radk init
 ```
 
 You will be asked a few questions:
@@ -35,13 +35,13 @@ This creates a `components.json` file and installs the base dependencies.
 Add a component to your project:
 
 ```bash
-npx krux add button
+npx radk add button
 ```
 
 You can add multiple components at once:
 
 ```bash
-npx krux add button card dialog select
+npx radk add button card dialog select
 ```
 
 The CLI will:
@@ -64,7 +64,7 @@ The CLI will:
 Preview what a component add would do:
 
 ```bash
-npx krux add button --dry-run
+npx radk add button --dry-run
 ```
 
 ## diff
@@ -72,7 +72,7 @@ npx krux add button --dry-run
 Check if a locally installed component is up to date with the registry:
 
 ```bash
-npx krux diff button
+npx radk diff button
 ```
 
 Output:
@@ -80,5 +80,5 @@ Output:
 ```
   button: up to date
   card: differs from registry
-  Run `krux add --yes card` to update
+  Run `radk add --yes card` to update
 ```

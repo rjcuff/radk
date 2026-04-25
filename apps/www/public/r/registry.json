@@ -1,7 +1,7 @@
 {
-  "$schema": "https://krux.dev/schema/registry.json",
-  "name": "krux",
-  "homepage": "https://krux.dev",
+  "$schema": "https://radk.dev/schema/registry.json",
+  "name": "radk",
+  "homepage": "https://radk.dev",
   "items": [
     {
       "name": "button",
