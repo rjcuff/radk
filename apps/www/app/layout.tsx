@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in. Just source code you own.",
     images: [
       {
-        url: "https://radk.dev/og.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
         alt: "radk — Build beautiful interfaces faster. Own every pixel.",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     title: "radk — Build beautiful interfaces faster. Own every pixel.",
     description:
       "Copy-paste React components built on Radix UI and Tailwind CSS. No npm packages, no lock-in.",
-    images: ["https://radk.dev/og.png"],
+    images: ["/og.png"],
   },
   robots: {
     index: true,
