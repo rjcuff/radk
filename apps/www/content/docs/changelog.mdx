@@ -3,6 +3,46 @@ title: Changelog
 description: Latest updates and changes to radk.
 ---
 
+## v0.3.0
+
+*April 2026*
+
+### Blocks
+
+10 copy-paste section templates added under `/docs/blocks`:
+
+- **Hero** — headline, subheading, CTA buttons, social proof
+- **Features** — tabbed filter + responsive card grid
+- **Pricing** — three-tier cards with monthly/yearly toggle
+- **FAQ** — collapsible accordion
+- **Contact Form** — name, email, subject select, message textarea
+- **Stats** — four-column metric grid
+- **Testimonials** — card grid with avatars
+- **Login Form** — email, password, remember me, social sign-in
+- **Data Table** — searchable, filterable table with status badges
+- **Settings Form** — profile, notification toggles, security section
+
+### CLI — `radk init` overhaul
+
+- **Theme picker** — choose Pink, Green, Blue, Orange, or Purple at init time; swatches render in colour in the terminal
+- **CSS injection** — appends full `:root` + `.dark` CSS variable block to your globals.css with the chosen primary colour baked in
+- **`cn()` utility** — creates `src/lib/utils.ts` automatically
+- **Prereq detection** — detects Next.js / Remix / Vite and warns if Tailwind CSS is missing
+- **`--yes` flag** — prints defaults and skips all prompts
+- Installs `clsx`, `tailwind-merge`, `class-variance-authority`, `@radix-ui/react-slot` in one step
+
+### Home page
+
+- Hero section now uses the `HeroBlock` component
+- Theme colour switcher replaces the social proof row on the home page
+- **Blocks** link added to the navbar (desktop + mobile)
+
+### Fixes
+
+- Blocks are fully mobile responsive — name grids, filter toolbars, and tab lists all handled at small breakpoints
+
+---
+
 ## v0.2.0
 
 *April 2026*

@@ -1,0 +1,28 @@
+---
+title: FAQ
+description: A frequently asked questions section using an accordion for collapsible answers.
+---
+
+<FaqBlockDemo />
+
+## Installation
+
+This block uses the following components. Add any you don't have yet:
+
+```bash
+npx radk add accordion badge
+```
+
+## Usage
+
+```tsx
+import { FaqBlock } from "@/components/blocks/faq"
+```
+
+```tsx
+<FaqBlock />
+```
+
+## Source
+
+Edit the `faqs` array to add your own questions and answers. The accordion uses `type="single"` with `collapsible` so only one item is open at a time.

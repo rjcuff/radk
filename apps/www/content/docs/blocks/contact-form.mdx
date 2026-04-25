@@ -1,0 +1,28 @@
+---
+title: Contact Form
+description: A contact form section with name, email, subject select, and message textarea fields.
+---
+
+<ContactFormBlockDemo />
+
+## Installation
+
+This block uses the following components. Add any you don't have yet:
+
+```bash
+npx radk add badge button card input label select textarea
+```
+
+## Usage
+
+```tsx
+import { ContactFormBlock } from "@/components/blocks/contact-form"
+```
+
+```tsx
+<ContactFormBlock />
+```
+
+## Source
+
+Wire up the form submission by adding a `onSubmit` handler to the Card. For validation, pair with [React Hook Form](/docs/forms/react-hook-form) or [TanStack Form](/docs/forms/tanstack-form).

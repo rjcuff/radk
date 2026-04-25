@@ -1,0 +1,28 @@
+---
+title: Login Form
+description: A login form with email, password, remember me checkbox, and a social sign-in button.
+---
+
+<LoginFormBlockDemo />
+
+## Installation
+
+This block uses the following components. Add any you don't have yet:
+
+```bash
+npx radk add button card checkbox input label separator
+```
+
+## Usage
+
+```tsx
+import { LoginFormBlock } from "@/components/blocks/login-form"
+```
+
+```tsx
+<LoginFormBlock />
+```
+
+## Source
+
+Wire up the form submission with your auth provider. For validation, pair with [React Hook Form](/docs/forms/react-hook-form) or [TanStack Form](/docs/forms/tanstack-form).

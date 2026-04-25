@@ -1,0 +1,28 @@
+---
+title: Settings Form
+description: An account settings page with profile fields, notification toggles, and security options.
+---
+
+<SettingsFormBlockDemo />
+
+## Installation
+
+This block uses the following components. Add any you don't have yet:
+
+```bash
+npx radk add button card input label select separator switch
+```
+
+## Usage
+
+```tsx
+import { SettingsFormBlock } from "@/components/blocks/settings-form"
+```
+
+```tsx
+<SettingsFormBlock />
+```
+
+## Source
+
+The notification and security toggles use local state. Connect them to your backend by calling your update API inside the `onCheckedChange` handlers.

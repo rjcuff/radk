@@ -17,13 +17,19 @@ export function Navbar() {
             href="/docs"
             className="px-3 py-1.5 font-bold border-2 border-transparent hover:border-foreground hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] transition-all"
           >
-            Docs
+            docs
           </Link>
           <Link
             href="/docs/components/button"
             className="px-3 py-1.5 font-bold border-2 border-transparent hover:border-foreground hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] transition-all"
           >
-            Components
+            components
+          </Link>
+          <Link
+            href="/docs/blocks/hero"
+            className="px-3 py-1.5 font-bold border-2 border-transparent hover:border-foreground hover:shadow-[2px_2px_0_0_var(--neo-shadow-color)] transition-all"
+          >
+            blocks
           </Link>
         </nav>
         <div className="ml-auto flex items-center gap-2">

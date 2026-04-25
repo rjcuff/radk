@@ -1,0 +1,25 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "pricing",
+  "type": "registry:block",
+  "title": "Pricing",
+  "description": "A three-tier pricing section with monthly/yearly toggle and highlighted popular plan.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "badge",
+    "button",
+    "card",
+    "label",
+    "separator",
+    "switch"
+  ],
+  "files": [
+    {
+      "path": "registry/radk/blocks/pricing.tsx",
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Badge } from \"@/registry/radk/ui/badge\"\nimport { Button } from \"@/registry/radk/ui/button\"\nimport {\n  Card,\n  CardContent,\n  CardDescription,\n  CardFooter,\n  CardHeader,\n  CardTitle,\n} from \"@/registry/radk/ui/card\"\nimport { Label } from \"@/registry/radk/ui/label\"\nimport { Separator } from \"@/registry/radk/ui/separator\"\nimport { Switch } from \"@/registry/radk/ui/switch\"\n\ntype ButtonVariant = \"default\" | \"outline\"\n\ninterface Plan {\n  name: string\n  monthlyPrice: number\n  yearlyPrice: number\n  description: string\n  features: string[]\n  popular: boolean\n  cta: string\n  variant: ButtonVariant\n}\n\nconst plans: Plan[] = [\n  {\n    name: \"Starter\",\n    monthlyPrice: 0,\n    yearlyPrice: 0,\n    description: \"Perfect for side projects and personal use.\",\n    features: [\"5 projects\", \"10 components\", \"Community support\", \"Basic analytics\"],\n    popular: false,\n    cta: \"Get started free\",\n    variant: \"outline\",\n  },\n  {\n    name: \"Pro\",\n    monthlyPrice: 19,\n    yearlyPrice: 15,\n    description: \"Everything you need to ship fast.\",\n    features: [\n      \"Unlimited projects\",\n      \"All components\",\n      \"Priority support\",\n      \"Advanced analytics\",\n      \"Custom themes\",\n    ],\n    popular: true,\n    cta: \"Start free trial\",\n    variant: \"default\",\n  },\n  {\n    name: \"Team\",\n    monthlyPrice: 49,\n    yearlyPrice: 39,\n    description: \"For teams building at scale.\",\n    features: [\n      \"Everything in Pro\",\n      \"Team management\",\n      \"SSO / SAML\",\n      \"SLA guarantee\",\n      \"Custom contracts\",\n    ],\n    popular: false,\n    cta: \"Contact sales\",\n    variant: \"outline\",\n  },\n]\n\nexport function PricingBlock() {\n  const [yearly, setYearly] = React.useState(false)\n\n  return (\n    <section className=\"py-20 px-6\">\n      <div className=\"mx-auto max-w-5xl space-y-12\">\n        <div className=\"text-center space-y-3\">\n          <Badge variant=\"outline\">Pricing</Badge>\n          <h2 className=\"text-3xl font-black tracking-tight sm:text-4xl\">\n            Simple, transparent pricing\n          </h2>\n          <p className=\"text-muted-foreground\">No hidden fees. Cancel anytime.</p>\n          <div className=\"flex items-center justify-center gap-3 pt-2\">\n            <Label htmlFor=\"billing-toggle\">Monthly</Label>\n            <Switch\n              id=\"billing-toggle\"\n              checked={yearly}\n              onCheckedChange={setYearly}\n            />\n            <Label htmlFor=\"billing-toggle\">\n              Yearly{\" \"}\n              <span className=\"text-primary font-bold ml-1\">Save 20%</span>\n            </Label>\n          </div>\n        </div>\n        <div className=\"grid gap-6 lg:grid-cols-3\">\n          {plans.map((plan) => (\n            <Card\n              key={plan.name}\n              className={\n                plan.popular\n                  ? \"border-primary shadow-[6px_6px_0_0_var(--neo-shadow-color)]\"\n                  : \"\"\n              }\n            >\n              <CardHeader>\n                <div className=\"flex items-center justify-between\">\n                  <CardTitle>{plan.name}</CardTitle>\n                  {plan.popular && <Badge>Most Popular</Badge>}\n                </div>\n                <CardDescription>{plan.description}</CardDescription>\n                <div className=\"pt-2\">\n                  <span className=\"text-4xl font-black\">\n                    ${yearly ? plan.yearlyPrice : plan.monthlyPrice}\n                  </span>\n                  <span className=\"text-muted-foreground\">/mo</span>\n                </div>\n              </CardHeader>\n              <Separator />\n              <CardContent className=\"pt-6\">\n                <ul className=\"space-y-2 text-sm\">\n                  {plan.features.map((feature) => (\n                    <li key={feature} className=\"flex items-center gap-2\">\n                      <span className=\"text-primary font-bold\">✓</span>\n                      {feature}\n                    </li>\n                  ))}\n                </ul>\n              </CardContent>\n              <CardFooter>\n                <Button variant={plan.variant} className=\"w-full\">\n                  {plan.cta}\n                </Button>\n              </CardFooter>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n"
+    }
+  ],
+  "cssVars": {}
+}

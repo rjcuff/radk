@@ -263,6 +263,96 @@
       "dependencies": ["@radix-ui/react-scroll-area"],
       "registryDependencies": [],
       "files": [{ "path": "registry/radk/ui/scroll-area.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "hero",
+      "type": "registry:block",
+      "title": "Hero",
+      "description": "A hero section with headline, subheading, CTA buttons, and avatar social proof.",
+      "dependencies": [],
+      "registryDependencies": ["button", "badge", "avatar"],
+      "files": [{ "path": "registry/radk/blocks/hero.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "features",
+      "type": "registry:block",
+      "title": "Features",
+      "description": "A features section with a tabbed filter and responsive card grid.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "card", "tabs"],
+      "files": [{ "path": "registry/radk/blocks/features.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "pricing",
+      "type": "registry:block",
+      "title": "Pricing",
+      "description": "A three-tier pricing section with monthly/yearly toggle and highlighted popular plan.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button", "card", "label", "separator", "switch"],
+      "files": [{ "path": "registry/radk/blocks/pricing.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "faq",
+      "type": "registry:block",
+      "title": "FAQ",
+      "description": "A frequently asked questions section using a collapsible accordion.",
+      "dependencies": [],
+      "registryDependencies": ["accordion", "badge"],
+      "files": [{ "path": "registry/radk/blocks/faq.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "contact-form",
+      "type": "registry:block",
+      "title": "Contact Form",
+      "description": "A contact form section with name, email, subject select, and message textarea.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button", "card", "input", "label", "select", "textarea"],
+      "files": [{ "path": "registry/radk/blocks/contact-form.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "stats",
+      "type": "registry:block",
+      "title": "Stats",
+      "description": "A stats section displaying key metrics in a responsive four-column card grid.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "card"],
+      "files": [{ "path": "registry/radk/blocks/stats.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "testimonials",
+      "type": "registry:block",
+      "title": "Testimonials",
+      "description": "A testimonials section with a card grid, avatar initials, and quoted text.",
+      "dependencies": [],
+      "registryDependencies": ["avatar", "badge", "card"],
+      "files": [{ "path": "registry/radk/blocks/testimonials.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "login-form",
+      "type": "registry:block",
+      "title": "Login Form",
+      "description": "A login form with email, password, remember me checkbox, and social sign-in.",
+      "dependencies": [],
+      "registryDependencies": ["button", "card", "checkbox", "input", "label", "separator"],
+      "files": [{ "path": "registry/radk/blocks/login-form.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:block",
+      "title": "Data Table",
+      "description": "A searchable, filterable data table with status badges and row actions.",
+      "dependencies": [],
+      "registryDependencies": ["badge", "button", "input", "select", "table"],
+      "files": [{ "path": "registry/radk/blocks/data-table.tsx", "type": "registry:component" }]
+    },
+    {
+      "name": "settings-form",
+      "type": "registry:block",
+      "title": "Settings Form",
+      "description": "An account settings page with profile fields, notification toggles, and security options.",
+      "dependencies": [],
+      "registryDependencies": ["button", "card", "input", "label", "select", "separator", "switch"],
+      "files": [{ "path": "registry/radk/blocks/settings-form.tsx", "type": "registry:component" }]
     }
   ]
 }

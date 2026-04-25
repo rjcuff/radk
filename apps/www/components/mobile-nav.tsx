@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 const links = [
   { href: "/docs", label: "Docs" },
   { href: "/docs/components/button", label: "Components" },
+  { href: "/docs/blocks/hero", label: "Blocks" },
 ]
 
 export function MobileNav() {

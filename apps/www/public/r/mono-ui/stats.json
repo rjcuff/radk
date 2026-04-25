@@ -1,0 +1,21 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "stats",
+  "type": "registry:block",
+  "title": "Stats",
+  "description": "A stats section displaying key metrics in a responsive four-column card grid.",
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "badge",
+    "card"
+  ],
+  "files": [
+    {
+      "path": "registry/radk/blocks/stats.tsx",
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Badge } from \"@/registry/radk/ui/badge\"\nimport { Card, CardContent } from \"@/registry/radk/ui/card\"\n\nconst stats = [\n  {\n    value: \"2,500+\",\n    label: \"Developers\",\n    description: \"Building with radk worldwide\",\n  },\n  {\n    value: \"29\",\n    label: \"Components\",\n    description: \"Production-ready, copy-paste\",\n  },\n  {\n    value: \"100%\",\n    label: \"Open Source\",\n    description: \"MIT licensed, no lock-in\",\n  },\n  {\n    value: \"0\",\n    label: \"npm deps\",\n    description: \"No package to install\",\n  },\n]\n\nexport function StatsBlock() {\n  return (\n    <section className=\"py-20 px-6\">\n      <div className=\"mx-auto max-w-5xl space-y-10\">\n        <div className=\"text-center space-y-3\">\n          <Badge variant=\"outline\">By the numbers</Badge>\n          <h2 className=\"text-3xl font-black tracking-tight sm:text-4xl\">\n            Trusted by builders\n          </h2>\n        </div>\n        <div className=\"grid gap-4 sm:grid-cols-2 lg:grid-cols-4\">\n          {stats.map((stat) => (\n            <Card key={stat.label}>\n              <CardContent className=\"pt-6 space-y-1\">\n                <div className=\"text-4xl font-black text-primary\">\n                  {stat.value}\n                </div>\n                <div className=\"font-bold text-foreground\">{stat.label}</div>\n                <div className=\"text-sm text-muted-foreground\">\n                  {stat.description}\n                </div>\n              </CardContent>\n            </Card>\n          ))}\n        </div>\n      </div>\n    </section>\n  )\n}\n"
+    }
+  ],
+  "cssVars": {}
+}

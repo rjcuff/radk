@@ -1,0 +1,20 @@
+{
+  "$schema": "https://mono-ui.dev/schema/registry-item.json",
+  "name": "collapsible",
+  "type": "registry:ui",
+  "title": "Collapsible",
+  "description": "An interactive component which expands/collapses a panel.",
+  "dependencies": [
+    "@radix-ui/react-collapsible"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "registry/radk/ui/collapsible.tsx",
+      "type": "registry:component",
+      "content": "\"use client\"\n\nimport * as CollapsiblePrimitive from \"@radix-ui/react-collapsible\"\n\nconst Collapsible = CollapsiblePrimitive.Root\nconst CollapsibleTrigger = CollapsiblePrimitive.CollapsibleTrigger\nconst CollapsibleContent = CollapsiblePrimitive.CollapsibleContent\n\nexport { Collapsible, CollapsibleTrigger, CollapsibleContent }\n"
+    }
+  ],
+  "cssVars": {}
+}

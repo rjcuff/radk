@@ -39,9 +39,6 @@ export function ThemeColorSwitcher({ className }: { className?: string }) {
 
   return (
     <div className={cn("flex items-center gap-3", className)}>
-      <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
-        Theme
-      </span>
       <div className="flex items-center gap-2">
         {THEMES.map((theme) => (
           <button

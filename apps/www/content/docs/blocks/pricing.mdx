@@ -1,0 +1,28 @@
+---
+title: Pricing
+description: A three-tier pricing section with a monthly/yearly billing toggle and a highlighted popular plan.
+---
+
+<PricingBlockDemo />
+
+## Installation
+
+This block uses the following components. Add any you don't have yet:
+
+```bash
+npx radk add badge button card label separator switch
+```
+
+## Usage
+
+```tsx
+import { PricingBlock } from "@/components/blocks/pricing"
+```
+
+```tsx
+<PricingBlock />
+```
+
+## Source
+
+Edit the `plans` array to set your own plan names, prices, and features. The `popular: true` flag applies the highlighted border style to a card.

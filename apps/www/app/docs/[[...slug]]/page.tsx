@@ -33,6 +33,16 @@ import { TableDemo } from "@/components/docs/table-demo"
 import { CollapsibleDemo } from "@/components/docs/collapsible-demo"
 import { BreadcrumbDemo } from "@/components/docs/breadcrumb-demo"
 import { ScrollAreaDemo } from "@/components/docs/scroll-area-demo"
+import { HeroBlockDemo } from "@/components/docs/blocks/hero-block-demo"
+import { FeaturesBlockDemo } from "@/components/docs/blocks/features-block-demo"
+import { PricingBlockDemo } from "@/components/docs/blocks/pricing-block-demo"
+import { FaqBlockDemo } from "@/components/docs/blocks/faq-block-demo"
+import { ContactFormBlockDemo } from "@/components/docs/blocks/contact-form-block-demo"
+import { StatsBlockDemo } from "@/components/docs/blocks/stats-block-demo"
+import { TestimonialsBlockDemo } from "@/components/docs/blocks/testimonials-block-demo"
+import { LoginFormBlockDemo } from "@/components/docs/blocks/login-form-block-demo"
+import { DataTableBlockDemo } from "@/components/docs/blocks/data-table-block-demo"
+import { SettingsFormBlockDemo } from "@/components/docs/blocks/settings-form-block-demo"
 
 const customComponents = {
   ...defaultMdxComponents,
@@ -66,6 +76,16 @@ const customComponents = {
   CollapsibleDemo,
   BreadcrumbDemo,
   ScrollAreaDemo,
+  HeroBlockDemo,
+  FeaturesBlockDemo,
+  PricingBlockDemo,
+  FaqBlockDemo,
+  ContactFormBlockDemo,
+  StatsBlockDemo,
+  TestimonialsBlockDemo,
+  LoginFormBlockDemo,
+  DataTableBlockDemo,
+  SettingsFormBlockDemo,
 }
 
 export default async function Page({

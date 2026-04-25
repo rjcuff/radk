@@ -1,0 +1,28 @@
+---
+title: Data Table
+description: A searchable, filterable data table with status badges and row actions.
+---
+
+<DataTableBlockDemo />
+
+## Installation
+
+This block uses the following components. Add any you don't have yet:
+
+```bash
+npx radk add badge button input select table
+```
+
+## Usage
+
+```tsx
+import { DataTableBlock } from "@/components/blocks/data-table"
+```
+
+```tsx
+<DataTableBlock />
+```
+
+## Source
+
+Replace the static `users` array with your own data source. The search and role filter use local state — swap these for server-side query params as needed.

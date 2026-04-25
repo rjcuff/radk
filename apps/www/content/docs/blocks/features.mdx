@@ -1,0 +1,28 @@
+---
+title: Features
+description: A features section with a tabbed filter and a responsive card grid.
+---
+
+<FeaturesBlockDemo />
+
+## Installation
+
+This block uses the following components. Add any you don't have yet:
+
+```bash
+npx radk add badge card tabs
+```
+
+## Usage
+
+```tsx
+import { FeaturesBlock } from "@/components/blocks/features"
+```
+
+```tsx
+<FeaturesBlock />
+```
+
+## Source
+
+Edit the `features` array to add your own feature cards. Each item has a `category` field (`"dx"` or `"design"`) that controls which tab it appears under.
