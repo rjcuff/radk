@@ -23,9 +23,11 @@ export function HeroBlock({ children }: HeroBlockProps) {
           packages, no lock-in. Just source code you own.
         </p>
         <div className="flex items-center justify-center gap-4">
-          <Button size="lg">Get Started</Button>
-          <Button size="lg" variant="outline">
-            View Components
+          <Button size="lg" asChild>
+            <a href="/docs/installation">Get Started</a>
+          </Button>
+          <Button size="lg" variant="outline" asChild>
+            <a href="/docs/components/button">View Components</a>
           </Button>
         </div>
         <div className="flex items-center justify-center pt-2">
